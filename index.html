@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevate Her STEM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f6f8fb 0%, #eef3f8 100%);
+      color: #1f2937;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .logo {
+      font-size: 1.22rem;
+      font-weight: bold;
+      color: #1d3f77;
+      cursor: pointer;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .logo:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .logo span {
+      color: #6b7280;
+      font-weight: normal;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 0.96rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+      display: inline-block;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #1f3b73;
+      border-bottom: 2px solid #1f3b73;
+      transform: translateY(-1px);
+    }
+
+    main {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page {
+      display: none;
+      min-height: calc(100vh - 88px);
+      padding: 72px 0;
+      opacity: 0;
+      transform: translateY(24px) scale(0.99);
+      transform-origin: center top;
+    }
+
+    .page.active-page {
+      display: block;
+      animation: pageIn 0.7s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(26px) scale(0.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes floatUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(238, 242, 247, 0.95) 0%, rgba(248, 250, 252, 0.96) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 26px;
+      padding: 84px 54px;
+      margin-bottom: 30px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -70px;
+      top: -70px;
+      background: radial-gradient(circle, rgba(31, 59, 115, 0.08) 0%, rgba(31, 59, 115, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #516072;
+      margin-bottom: 18px;
+      animation: floatUp 0.6s ease both;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      color: #111827;
+      margin-bottom: 18px;
+      max-width: 780px;
+      animation: floatUp 0.8s ease both;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #4b5563;
+      max-width: 700px;
+      margin-bottom: 30px;
+      animation: floatUp 1s ease both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: floatUp 1.15s ease both;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .btn-primary {
+      background-color: #1f3b73;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #162c56;
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: #1f3b73;
+      border: 1px solid #d2dae4;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f8fafc;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+
+    .section-text {
+      color: #4b5563;
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card,
+    .feature-panel,
+    .stat-box,
+    .person-card,
+    .detail-panel,
+    .contact-box,
+    .quote-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
+    }
+
+    .card {
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 {
+      font-size: 1.08rem;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #4b5563;
+      font-size: 0.96rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .stat-box {
+      border-radius: 16px;
+      padding: 22px;
+      transition: transform 0.25s ease;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1f3b73;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .home-split {
+      display: grid;
+      grid-template-columns: 1.2fr 0.95fr;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .feature-panel {
+      border-radius: 18px;
+      padding: 28px;
+      transition: transform 0.25s ease;
+    }
+
+    .feature-panel:hover {
+      transform: translateY(-4px);
+    }
+
+    .feature-panel ul {
+      padding-left: 18px;
+      color: #4b5563;
+    }
+
+    .feature-panel li {
+      margin-bottom: 10px;
+    }
+
+    .quote-card {
+      border-left: 4px solid #1f3b73;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+      transition: transform 0.25s ease;
+    }
+
+    .quote-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .quote-card p {
+      color: #374151;
+      margin-bottom: 12px;
+    }
+
+    .quote-card span {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .filter-bar {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .filter-bar input,
+    .filter-bar select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.95);
+      font-size: 0.95rem;
+      color: #374151;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .filter-bar input:focus,
+    .filter-bar select:focus {
+      outline: none;
+      border-color: #88a0c9;
+      box-shadow: 0 0 0 4px rgba(31, 59, 115, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 20px;
+    }
+
+    .person-card {
+      border-radius: 18px;
+      padding: 22px;
+      cursor: pointer;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .person-card::after {
+      content: "View profile →";
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      font-size: 0.82rem;
+      color: #6b7280;
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    .person-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 22px 38px rgba(15, 23, 42, 0.09);
+      border-color: #cfd8e3;
+    }
+
+    .person-card:hover::after {
+      transform: translateX(4px);
+      color: #1f3b73;
+    }
+
+    .person-name {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 6px;
+      padding-right: 90px;
+    }
+
+    .person-role {
+      color: #1f3b73;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .person-field {
+      color: #6b7280;
+      font-size: 0.93rem;
+      margin-bottom: 12px;
+    }
+
+    .person-card p {
+      color: #4b5563;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background-color: #eef2f7;
+      color: #35507e;
+      font-size: 0.82rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .empty-message {
+      display: none;
+      margin-top: 10px;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .detail-panel {
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .detail-name {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .detail-role {
+      color: #1f3b73;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .detail-field {
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .detail-section-title {
+      font-size: 1.05rem;
+      color: #111827;
+      margin-bottom: 10px;
+      margin-top: 18px;
+    }
+
+    .detail-text {
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #1f3b73;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 22px;
+      text-decoration: none;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .back-link:hover {
+      transform: translateX(-3px);
+      opacity: 0.9;
+    }
+
+    .contact-box {
+      border-radius: 18px;
+      padding: 32px;
+    }
+
+    .contact-box p {
+      color: #4b5563;
+      max-width: 700px;
+      margin-bottom: 18px;
+    }
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-top: 1px solid #e5e7eb;
+      padding: 24px 0;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 920px) {
+      .home-split,
+      .filter-bar,
+      .detail-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 42px 24px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .person-name {
+        padding-right: 0;
+      }
+
+      .person-card::after {
+        position: static;
+        display: block;
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo" id="logoHome">Elevate Her STEM <span>| GLOCAL Project</span></div>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+          <li><a href="#" class="nav-link" data-page="about">About</a></li>
+          <li><a href="#" class="nav-link" data-page="mission">Mission</a></li>
+          <li><a href="#" class="nav-link" data-page="stories">Stories</a></li>
+          <li><a href="#" class="nav-link" data-page="people">People</a></li>
+          <li><a href="#" class="nav-link" data-page="involved">Get Involved</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="page active-page">
+      <div class="hero">
+        <div class="hero-tag">Youth-led initiative</div>
+        <h1>Sharing advice from women in STEM to inspire the next generation.</h1>
+        <p>
+          Elevate Her STEM is a GLOCAL project focused on collecting and sharing stories, advice, and experiences from women in STEM. Our goal is to make mentorship feel more accessible, organized, and easy to explore for students.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary switch-page" data-page="stories">Explore Stories</button>
+          <button class="btn btn-secondary switch-page" data-page="people">Browse People</button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Interview targets</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">STEM categories</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Shared student platform</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Youth-focused access</div>
+        </div>
+      </div>
+
+      <div class="home-split">
+        <div class="feature-panel">
+          <h2 class="section-title">Why this project matters</h2>
+          <p class="section-text">
+            Many students are interested in STEM, but they do not always have direct access to mentors or honest advice from women already working in those fields. This project helps make those stories easier to find and learn from.
+          </p>
+          <ul>
+            <li>Learn about different STEM careers and education pathways</li>
+            <li>Read advice from women with different backgrounds and experiences</li>
+            <li>Explore interview responses by field of study and career area</li>
+            <li>Help students feel more connected to real opportunities in STEM</li>
+          </ul>
+        </div>
+
+        <div class="feature-panel">
+          <h2 class="section-title">What you can do here</h2>
+          <p class="section-text">
+            This website is designed to be simple and useful. Students can explore featured stories, search for specific people, and browse professionals by their career or field of study.
+          </p>
+          <div class="quote-card">
+            <p>“One story can change how a student sees their own future.”</p>
+            <span>Project message</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="page">
+      <h2 class="section-title">About the Project</h2>
+      <p class="section-text">
+        This website was created as part of a GLOCAL-supported project. We are interviewing women across different STEM fields and building a space where students can learn from their journeys, challenges, achievements, and advice.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>What we collect</h3>
+          <p>We gather interviews, reflections, personal advice, and insights from women working in STEM-related fields.</p>
+        </div>
+        <div class="card">
+          <h3>Who this helps</h3>
+          <p>This project is designed for students and youth who want more guidance, representation, and real stories from people in STEM.</p>
+        </div>
+        <div class="card">
+          <h3>Why it matters</h3>
+          <p>Representation can help students feel seen, more confident, and more open to opportunities they may not have considered before.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="page">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="section-text">
+        We want to create a clean and accessible platform where advice from women in STEM is easy to read, relatable, and meaningful for younger students. Instead of making mentorship feel distant, we want to make it feel real and reachable.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Accessibility</h3>
+          <p>Students should be able to quickly find stories and advice.</p>
+        </div>
+        <div class="card">
+          <h3>Connection</h3>
+          <p>We hope this platform helps youth feel more connected to professionals and future possibilities.</p>
+        </div>
+        <div class="card">
+          <h3>Encouragement</h3>
+          <p>Sometimes one honest story or one piece of advice can make a student feel less alone in their path.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="page">
+      <h2 class="section-title">Interview Spotlights</h2>
+      <p class="section-text">
+        These are sample cards for now. Later, you can replace them with real interview responses from the people your team contacts.
+      </p>
+      <div class="quote-card">
+        <p>“You do not need to have everything figured out right away. Curiosity and consistency matter more than having the perfect plan.”</p>
+        <span>Sample interview highlight</span>
+      </div>
+      <div class="quote-card">
+        <p>“One of the most important things I learned was to keep asking questions, even when I felt inexperienced.”</p>
+        <span>Sample interview highlight</span>
+      </div>
+      <div class="quote-card">
+        <p>“Representation matters because students should be able to see that there is space for them in these fields too.”</p>
+        <span>Sample interview highlight</span>
+      </div>
+    </section>
+
+    <section id="people" class="page">
+      <h2 class="section-title">Browse People</h2>
+      <p class="section-text">
+        Students can search for a person by name or filter by career area and field of study. Clicking a card opens a detailed profile page.
+      </p>
+
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Search by name...">
+        <select id="careerFilter">
+          <option value="all">All careers</option>
+          <option value="engineering">Engineering</option>
+          <option value="computer science">Computer Science</option>
+          <option value="medicine">Medicine</option>
+          <option value="research">Research</option>
+          <option value="environmental science">Environmental Science</option>
+        </select>
+        <select id="fieldFilter">
+          <option value="all">All fields of study</option>
+          <option value="biomedical engineering">Biomedical Engineering</option>
+          <option value="software engineering">Software Engineering</option>
+          <option value="biology">Biology</option>
+          <option value="chemistry">Chemistry</option>
+          <option value="data science">Data Science</option>
+        </select>
+      </div>
+
+      <div class="people-grid" id="peopleGrid">
+        <div class="person-card" data-profile="maya" data-name="maya chen" data-career="engineering" data-field="biomedical engineering">
+          <div class="person-name">Dr. Maya Chen</div>
+          <div class="person-role">Biomedical Engineer</div>
+          <div class="person-field">Field of Study: Biomedical Engineering</div>
+          <p>Works on medical device design and shares advice about building confidence in technical spaces.</p>
+          <div class="tag-row">
+            <div class="tag">Engineering</div>
+            <div class="tag">Healthcare</div>
+          </div>
+        </div>
+
+        <div class="person-card" data-profile="aisha" data-name="aisha patel" data-career="computer science" data-field="software engineering">
+          <div class="person-name">Aisha Patel</div>
+          <div class="person-role">Software Engineer</div>
+          <div class="person-field">Field of Study: Software Engineering</div>
+          <p>Works in tech and speaks about internships, problem solving, and finding your path in computing.</p>
+          <div class="tag-row">
+            <div class="tag">Computer Science</div>
+            <div class="tag">Technology</div>
+          </div>
+        </div>
+
+        <div class="person-card" data-profile="sofia" data-name="sofia martinez" data-career="research" data-field="biology">
+          <div class="person-name">Sofia Martinez</div>
+          <div class="person-role">Research Scientist</div>
+          <div class="person-field">Field of Study: Biology</div>
+          <p>Focuses on lab research and talks about resilience, curiosity, and learning from failed experiments.</p>
+          <div class="tag-row">
+            <div class="tag">Research</div>
+            <div class="tag">Biology</div>
+          </div>
+        </div>
+
+        <div class="person-card" data-profile="nora" data-name="nora ahmed" data-career="medicine" data-field="chemistry">
+          <div class="person-name">Dr. Nora Ahmed</div>
+          <div class="person-role">Physician</div>
+          <div class="person-field">Field of Study: Chemistry</div>
+          <p>Shares her experience in healthcare and gives advice on balancing academics, purpose, and long-term goals.</p>
+          <div class="tag-row">
+            <div class="tag">Medicine</div>
+            <div class="tag">Healthcare</div>
+          </div>
+        </div>
+
+        <div class="person-card" data-profile="emma" data-name="emma liu" data-career="environmental science" data-field="data science">
+          <div class="person-name">Emma Liu</div>
+          <div class="person-role">Environmental Data Analyst</div>
+          <div class="person-field">Field of Study: Data Science</div>
+          <p>Uses environmental data to support research and policy work, and encourages students to explore interdisciplinary STEM paths.</p>
+          <div class="tag-row">
+            <div class="tag">Environmental Science</div>
+            <div class="tag">Data</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="empty-message" id="emptyMessage">No results found for that search or filter.</p>
+    </section>
+
+    <section id="profile" class="page">
+      <a href="#" class="back-link" id="backToPeople">← Back to People</a>
+      <div class="detail-layout">
+        <div class="detail-panel">
+          <div class="detail-name" id="detailName">Name</div>
+          <div class="detail-role" id="detailRole">Role</div>
+          <div class="detail-field" id="detailField">Field of Study</div>
+          <div class="tag-row" id="detailTags"></div>
+        </div>
+
+        <div class="detail-panel">
+          <div class="detail-section-title">About</div>
+          <p class="detail-text" id="detailAbout"></p>
+
+          <div class="detail-section-title">Career Journey</div>
+          <p class="detail-text" id="detailJourney"></p>
+
+          <div class="detail-section-title">Advice for Students</div>
+          <p class="detail-text" id="detailAdvice"></p>
+
+          <div class="detail-section-title">Key Insight</div>
+          <p class="detail-text" id="detailInsight"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="involved" class="page">
+      <div class="contact-box">
+        <h2 class="section-title">Get Involved</h2>
+        <p>
+          We are currently reaching out to women in STEM for interviews and written responses. If you are interested in participating, supporting outreach, or learning more about the project, we would love to connect.
+        </p>
+        <a href="mailto:yourname@email.com" class="btn btn-primary">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Elevate Her STEM • A student-led GLOCAL project</p>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+    const logoHome = document.getElementById('logoHome');
+    const peopleCards = document.querySelectorAll('.person-card');
+    const searchInput = document.getElementById('searchInput');
+    const careerFilter = document.getElementById('careerFilter');
+    const fieldFilter = document.getElementById('fieldFilter');
+    const emptyMessage = document.getElementById('emptyMessage');
+    const backToPeople = document.getElementById('backToPeople');
+
+    const profiles = {
+      maya: {
+        name: 'Dr. Maya Chen',
+        role: 'Biomedical Engineer',
+        field: 'Field of Study: Biomedical Engineering',
+        about: 'Dr. Maya Chen works in biomedical engineering and focuses on medical device design. Her work connects engineering ideas with real healthcare needs, especially in patient-centered innovation.',
+        journey: 'She studied biomedical engineering and became interested in STEM because she liked both science and problem solving. During her journey, she had to learn how to speak up in technical spaces and trust her own ideas more.',
+        advice: 'You do not need to feel fully ready before trying something difficult. Ask questions early, stay curious, and keep building your confidence through practice.',
+        insight: 'Technical skills matter, but confidence, communication, and persistence also shape long-term success.',
+        tags: ['Engineering', 'Healthcare', 'Innovation']
+      },
+      aisha: {
+        name: 'Aisha Patel',
+        role: 'Software Engineer',
+        field: 'Field of Study: Software Engineering',
+        about: 'Aisha Patel works in software engineering and enjoys building useful tools that solve real problems. She is especially interested in making technology feel practical and accessible.',
+        journey: 'She explored coding through projects and internships and slowly found confidence in computer science. She learned that growth in tech often comes from doing, testing, failing, and improving.',
+        advice: 'Do not wait until you think you are perfect at coding. Start building things early, even small things, because that is where the real learning happens.',
+        insight: 'Consistency matters more than talent at the beginning. Progress comes from repetition and curiosity.',
+        tags: ['Computer Science', 'Technology', 'Problem Solving']
+      },
+      sofia: {
+        name: 'Sofia Martinez',
+        role: 'Research Scientist',
+        field: 'Field of Study: Biology',
+        about: 'Sofia Martinez works in research and spends much of her time studying scientific questions through experiments, data, and collaboration.',
+        journey: 'Her path involved a lot of trial and error. She learned that failed experiments are not wasted work and that science moves forward through revision and persistence.',
+        advice: 'Do not let setbacks convince you that you are not meant for STEM. Struggling is part of the process, not proof that you cannot do it.',
+        insight: 'Curiosity is one of the most powerful things a student can keep as they grow.',
+        tags: ['Research', 'Biology', 'Lab Work']
+      },
+      nora: {
+        name: 'Dr. Nora Ahmed',
+        role: 'Physician',
+        field: 'Field of Study: Chemistry',
+        about: 'Dr. Nora Ahmed works in medicine and brings together science, care, and communication in her daily work with patients and teams.',
+        journey: 'She followed a demanding academic path and had to learn how to balance achievement with wellbeing. Her experiences taught her that purpose matters just as much as performance.',
+        advice: 'It is okay if your path is long or difficult. Focus on why you care about the work, because that reason helps carry you through hard moments.',
+        insight: 'Success in medicine is not only academic. Empathy, discipline, and resilience are just as important.',
+        tags: ['Medicine', 'Healthcare', 'Leadership']
+      },
+      emma: {
+        name: 'Emma Liu',
+        role: 'Environmental Data Analyst',
+        field: 'Field of Study: Data Science',
+        about: 'Emma Liu works at the intersection of environmental science and data. She uses evidence and analysis to support research and larger decisions.',
+        journey: 'She discovered that interdisciplinary paths can be just as meaningful as more traditional ones. Her work combines coding, statistics, and environmental questions.',
+        advice: 'You do not have to fit into one narrow box in STEM. Different interests can work together and become your strength.',
+        insight: 'Some of the most exciting STEM careers happen between fields, not only inside one of them.',
+        tags: ['Environmental Science', 'Data', 'Interdisciplinary']
+      }
+    };
+
+    function showPage(pageId) {
+      pages.forEach(page => {
+        page.classList.remove('active-page');
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(pageId).classList.add('active-page');
+
+      navLinks.forEach(link => {
+        if (link.dataset.page === pageId) {
+          link.classList.add('active');
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openProfile(profileId) {
+      const profile = profiles[profileId];
+      if (!profile) return;
+
+      document.getElementById('detailName').textContent = profile.name;
+      document.getElementById('detailRole').textContent = profile.role;
+      document.getElementById('detailField').textContent = profile.field;
+      document.getElementById('detailAbout').textContent = profile.about;
+      document.getElementById('detailJourney').textContent = profile.journey;
+      document.getElementById('detailAdvice').textContent = profile.advice;
+      document.getElementById('detailInsight').textContent = profile.insight;
+
+      const tagsContainer = document.getElementById('detailTags');
+      tagsContainer.innerHTML = '';
+      profile.tags.forEach(tag => {
+        const tagElement = document.createElement('div');
+        tagElement.className = 'tag';
+        tagElement.textContent = tag;
+        tagsContainer.appendChild(tagElement);
+      });
+
+      showPage('profile');
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        showPage(this.dataset.page);
+      });
+    });
+
+    document.querySelectorAll('.switch-page').forEach(button => {
+      button.addEventListener('click', function() {
+        showPage(this.dataset.page);
+      });
+    });
+
+    logoHome.addEventListener('click', function() {
+      showPage('home');
+    });
+
+    peopleCards.forEach(card => {
+      card.addEventListener('click', function() {
+        openProfile(this.dataset.profile);
+      });
+    });
+
+    backToPeople.addEventListener('click', function(event) {
+      event.preventDefault();
+      showPage('people');
+    });
+
+    function filterPeople() {
+      const searchValue = searchInput.value.toLowerCase().trim();
+      const careerValue = careerFilter.value.toLowerCase();
+      const fieldValue = fieldFilter.value.toLowerCase();
+      let visibleCount = 0;
+
+      peopleCards.forEach(card => {
+        const name = card.dataset.name;
+        const career = card.dataset.career;
+        const field = card.dataset.field;
+
+        const matchesName = name.includes(searchValue);
+        const matchesCareer = careerValue === 'all' || career === careerValue;
+        const matchesField = fieldValue === 'all' || field === fieldValue;
+
+        if (matchesName && matchesCareer && matchesField) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyMessage.style.display = 'block';
+      } else {
+        emptyMessage.style.display = 'none';
+      }
+    }
+
+    searchInput.addEventListener('input', filterPeople);
+    careerFilter.addEventListener('change', filterPeople);
+    fieldFilter.addEventListener('change', filterPeople);
+  </script>
+</body>
+</html>
