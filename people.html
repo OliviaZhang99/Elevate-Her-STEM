@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People | Elevate Her STEM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="people">
+
+<header>
+  <div class="nav-inner">
+    <a class="logo" id="logoHome" href="index.html">Elevate Her STEM <em>| GLOCAL Project</em></a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="mission.html" class="nav-link">Mission</a></li>
+        <li><a href="stories.html" class="nav-link">Stories</a></li>
+        <li><a href="people.html" class="nav-link active">People</a></li>
+        <li><a href="contribute.html" class="nav-link">Contribute</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- PEOPLE -->
+  <section id="people" class="page active-page">
+    <div class="section-head">
+      <h2>Browse People</h2>
+      <p>Search by name or filter by career area and field. Click a profile to read the person's full interview summary.</p>
+    </div>
+    <div class="filter-row">
+      <input type="text" id="searchInput" placeholder="Search by name, theme, or keyword…">
+      <select id="careerFilter">
+        <option value="all">All careers</option>
+      </select>
+      <select id="fieldFilter">
+        <option value="all">All fields of study</option>
+      </select>
+    </div>
+    <div class="people-grid" id="peopleGrid"></div>
+    <p class="empty-msg" id="emptyMessage">No results found for that search or filter.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Elevate Her STEM &nbsp;•&nbsp; A student-led GLOCAL project</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
