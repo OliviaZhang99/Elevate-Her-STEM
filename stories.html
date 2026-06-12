@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Elevate Her STEM</title>
+  <title>Stories | Elevate Her STEM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -326,17 +326,17 @@
 
   </style>
 </head>
-<body data-page="home">
+<body data-page="stories">
 
 <header>
   <div class="nav-inner">
     <a class="logo" id="logoHome" href="index.html">Elevate Her STEM <em>| GLOCAL Project</em></a>
     <nav>
       <ul>
-        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="mission.html" class="nav-link">Mission</a></li>
-        <li><a href="stories.html" class="nav-link">Stories</a></li>
+        <li><a href="stories.html" class="nav-link active">Stories</a></li>
         <li><a href="people.html" class="nav-link">People</a></li>
         <li><a href="contribute.html" class="nav-link">Contribute</a></li>
       </ul>
@@ -345,61 +345,13 @@
 </header>
 
 <main>
-<!-- HOME -->
-  <section id="home" class="page active-page">
-    <div class="hero">
-      <div class="hero-eyebrow">Youth-led initiative</div>
-      <h1>Real STEM stories for students exploring their future</h1>
-      <p>Elevate Her STEM shares interview responses from women across various STEM fields, including science, technology, engineering, healthcare, education, entrepreneurship, research, and leadership, with the goal of making mentorship more accessible by organizing honest experiences, challenges, and advice in one place.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="stories.html">Explore Advice</a>
-        <a class="btn btn-ghost" href="people.html">Browse People</a>
-        <a class="btn btn-ghost" href="contribute.html">Contribute</a>
-      </div>
+<!-- STORIES -->
+  <section id="stories" class="page active-page">
+    <div class="section-head">
+      <h2>Interview Spotlights</h2>
+      <p>These spotlights focus on the advice, experience, and comments from the survey responses.</p>
     </div>
-
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-num">16</div>
-        <div class="stat-label">Interview responses added</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">10+</div>
-        <div class="stat-label">Career areas represented</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">1</div>
-        <div class="stat-label">Shared student platform</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Experience-focused stories</div>
-      </div>
-    </div>
-
-    <div class="split-grid">
-      <div class="panel">
-        <h2>Why this project is important</h2>
-        <p>Students usually learn about STEM careers in a broad way without knowing the specifics. As such, this project includes detailed advice and the human side of STEM careers.</p>
-        <ul>
-          <li>Learn how people with STEM careers first became interested in STEM.</li>
-          <li>Read advice that is honest, practical, and specific.</li>
-          <li>Explore how challenges and failures are a natural part of growth.</li>
-          <li>Browse people by field, career area, and key themes.</li>
-        </ul>
-      </div>
-      <div class="panel">
-        <h2>Featured lesson</h2>
-        <div class="quote-card">
-          <p>"You do not need permission to start building. The fastest way to grow is to take on things slightly beyond your current skill level."</p>
-          <cite>Ariadne Dulchinos, AI and healthcare technology</cite>
-        </div>
-        <div class="quote-card">
-          <p>"There are so many roads that can lead to the same place, but also each road can fork into endless possibilities."</p>
-          <cite>Mady Thompson, biomedical engineering</cite>
-        </div>
-      </div>
-    </div>
+    <div class="spotlight-grid" id="spotlightList"></div>
   </section>
 </main>
 
