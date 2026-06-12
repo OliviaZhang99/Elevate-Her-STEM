@@ -1,1 +1,0 @@
-# Elevate-Her-STEM
