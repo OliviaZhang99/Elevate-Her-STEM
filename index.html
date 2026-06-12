@@ -334,7 +334,7 @@
     <div class="hero">
       <div class="hero-eyebrow">Youth-led initiative</div>
       <h1>Real STEM stories for students exploring their future</h1>
-      <p>Elevate Her STEM shares interview responses from women across various STEM fields, including science, technology, engineering, healthcare, entrepreneurship, research, and leadership, with the goal of making mentorship more accessible by organizing honest experiences, challenges, and advice in one place.</p>
+      <p>Elevate Her STEM shares interview responses from women across various STEM fields, including science, technology, engineering, healthcare, education, entrepreneurship, research, and leadership, with the goal of making mentorship more accessible by organizing honest experiences, challenges, and advice in one place.</p>
       <div class="hero-actions">
         <button class="btn btn-primary switch-page" data-page="stories">Explore Advice</button>
         <button class="btn btn-ghost switch-page" data-page="people">Browse People</button>
@@ -344,11 +344,11 @@
 
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-num">5</div>
+        <div class="stat-num">16</div>
         <div class="stat-label">Interview responses added</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">6+</div>
+        <div class="stat-num">10+</div>
         <div class="stat-label">Career areas represented</div>
       </div>
       <div class="stat-card">
@@ -455,19 +455,9 @@
       <input type="text" id="searchInput" placeholder="Search by name, theme, or keyword…">
       <select id="careerFilter">
         <option value="all">All careers</option>
-        <option value="lab science">Lab Science</option>
-        <option value="ai and technology">AI and Technology</option>
-        <option value="leadership coaching">Leadership Coaching</option>
-        <option value="biomedical engineering">Biomedical Engineering</option>
-        <option value="digital energy">Digital Energy</option>
       </select>
       <select id="fieldFilter">
         <option value="all">All fields of study</option>
-        <option value="chemistry">Chemistry</option>
-        <option value="computer science and neuroscience">Computer Science and Neuroscience</option>
-        <option value="stem leadership">STEM Leadership</option>
-        <option value="biomedical engineering">Biomedical Engineering</option>
-        <option value="electronic engineering">Electronic Engineering</option>
       </select>
     </div>
     <div class="people-grid" id="peopleGrid"></div>
@@ -549,11 +539,342 @@
 
 <script>
 const profiles = [
-  {id:'lisa',name:'Lisa',role:'Chemistry Lab Technician',career:'lab science',field:'chemistry',summary:'A chemistry lab technician whose interest in STEM began with a junior school chemistry teacher and hands-on experiments.',tags:['Chemistry','Lab Work','Precision'],takeaway:'Long-term focus and internal conviction can help students stay steady even when one difficult course or setback feels discouraging.',about:'Lisa works as a chemistry lab technician. Her work connects experimental design, careful lab practice, and precision, especially in technical environments where accuracy matters.',spark:'Her interest began with a friendly junior school chemistry teacher who used experiments to make chemistry feel exciting and understandable. She also became interested in nanotechnology because it connected to her strengths.',challenge:'She described communication challenges in professional environments, including receiving aggressive feedback without a clear link to her actual work. She also pointed to the difficulty of balancing high-intensity STEM work with household responsibilities.',setback:'A serious laboratory accident nearly cost her vision and made returning to experimental research psychologically difficult. The experience taught her that perseverance is not just finishing tasks, but keeping courage after a major setback.',skill:'She is proud of earning her Master\u2019s degree with honors. The skill she values most is disciplined experimental design and a commitment to precision, even when the work is complicated.',advice:'Focus on long-term goals instead of immediate academic perfection. Do not let one difficult course make you give up on an entire field. Pay attention to the subjects whose logic clicks for you.',links:''},
-  {id:'ariadne',name:'Ariadne Dulchinos',role:'Co-founder and CTO working in AI and healthcare technology',career:'ai and technology',field:'computer science and neuroscience',summary:'An MIT graduate combining computer science, neuroscience, AI, and healthcare data to build tools for real-world decision making.',tags:['AI','Healthcare Data','Computer Science'],takeaway:'Start building before you feel fully ready. Real projects, even messy ones, are one of the fastest ways to learn and stand out.',about:'Ariadne Dulchinos is an MIT graduate and co-founder/CTO of Avenir AI. Her background includes computer science, neuroscience, AI research, and healthcare data analytics.',spark:'She first came to STEM through storytelling, art, and world-building. Coding let her create video games with original characters, while neuroscience helped her understand the brain and intelligence.',challenge:'She described being underestimated as a young woman and person of color in technical leadership. Instead of arguing for credibility, she focuses on clarity, speed, execution, and letting results shift perception.',setback:'A major lesson came from realizing that a technically strong idea does not automatically create value. She learned to start with a painful real-world problem, not just with the solution.',skill:'She is proud of building a product used by large enterprise customers. She sees communication as the central skill: turning feedback into product decisions and building trust within a team.',advice:'Build real projects early, even if they are messy. Follow what genuinely interests you, and remember that depth in a niche can become more valuable than surface-level breadth.',links:''},
-  {id:'stephanie',name:'Stephanie Paul',role:'STEM leadership and communication coach',career:'leadership coaching',field:'stem leadership',summary:'A leadership and communication professional supporting STEM leaders with influence, clarity, and confidence under pressure.',tags:['Leadership','Communication','Coaching'],takeaway:'Technical brilliance is powerful, but communication, influence, and self-advocacy often determine whether ideas actually land.',about:'Stephanie Paul works with scientists, engineers, and technical leaders who are moving from expert contributor roles into leadership and communication-heavy roles.',spark:'Her work shifted toward women in STEM after seeing many technically strong women struggle with owning their voice, leadership presence, and confidence in male-dominated spaces.',challenge:'She described STEM as still affected by male-driven structures, unequal pay, and limited access to mentoring and leadership development. Her response is to meet barriers directly and keep advocating for women\u2019s success.',setback:'Her main lesson is to adapt like water while refusing to accept that something is impossible. She frames obstacles as situations that require a different path, not a final stop.',skill:'She is proud of her clients\u2019 success and publishing a book. Her strongest skill is listening, connecting with people, and helping others use practical tools to achieve their goals.',advice:'Support yourself with community, mentors, coaches, and strong networks. STEM is creative, and students should invest in their own growth and development.',links:'<div class="profile-section-label">Optional links</div><p>LinkedIn and newsletter links were shared in the response, but they are kept secondary here so the profile stays focused on advice.</p>'},
-  {id:'mady',name:'Mady Thompson',role:'PhD researcher in Biomedical Engineering',career:'biomedical engineering',field:'biomedical engineering',summary:'A biomedical engineering PhD researcher working on tissue engineering models for peripheral nerve injuries.',tags:['Biomedical Engineering','Research','Tissue Engineering'],takeaway:'STEM paths are not always linear. Failing quickly, staying curious, and keeping outside support can make the journey more sustainable.',about:'Mady Thompson is defending her PhD in Biomedical Engineering and works part time at 3DBioFibR. Her research uses tissue engineering to create 3D cell culture models of peripheral nerve injuries.',spark:'Her interest started with human biology and understanding how things work. High school biology strengthened her interest in cells, disease, and treatment. Later, a master\u2019s supervisor introduced her to the potential of stem cells.',challenge:'She described being given extra administrative tasks, like taking notes or organizing events, and feeling that she must be doubly prepared to be taken seriously. She also noticed different expectations around professional appearance.',setback:'Her PhD taught her how to fail quickly. Many exploratory experiments fail, so she learned when to move on and when to stay the course.',skill:'She is proud of leadership and community-building awards because helping others matters to her. Curiosity is the skill she values most, especially when approaching problems and people.',advice:'Do not panic about choosing one perfect path. STEM fields are increasingly interdisciplinary, and many roads can lead to meaningful work. Ask professors or professionals questions because most people are happy to share their experiences.',links:''},
-  {id:'prathibha',name:'Prathibha Goonawardhana',role:'Project Manager in Digital Energy and founder',career:'digital energy',field:'electronic engineering',summary:'An electronic engineering and project management professional working across digital energy, automation, fintech, and entrepreneurship.',tags:['Electronic Engineering','Digital Energy','Project Management'],takeaway:'Difficult days do not last forever. Curiosity, people skills, and persistence can carry you through slow or unfair parts of the journey.',about:'Prathibha Goonawardhana works as a Project Manager in Schneider Electric\u2019s Digital Energy Applications Center, delivering energy monitoring and automation solutions. Her career spans IT, electronics, digital energy, fintech, and entrepreneurship.',spark:'Her interest began with watching her grandfather repair electronics around the house. She became fascinated by circuits, broken devices, and how patience and curiosity could solve practical problems.',challenge:'Earlier in her career, she saw pay gaps, male-favoured hiring, and even postings asking for male candidates only. As a racialized woman, newcomer, mother, and founder, she has also experienced barriers around access to investors and funding.',setback:'A final-round government-sector interview became a lesson in representation. Even after strong preparation, the all-male panel focused on perceived gaps instead of potential. She learned that rejection can reflect the limitations of the room, not the candidate.',skill:'She is most proud of her family and the stable life she built across countries and challenges. Her key skill is connecting with people, building trust, and navigating difficult conversations.',advice:'Stay curious and keep pushing yourself. STEM changes quickly, so growth comes from trying new things, learning continuously, and taking on challenges even when they feel uncomfortable.',links:'<div class="profile-section-label">Context note</div><p>She also shared a startup she is building. It is included as background only, not as the main focus of the profile.</p>'}
+  {
+    "id": "lisa",
+    "name": "Lisa",
+    "role": "Chemistry Lab Technician",
+    "career": "lab science",
+    "field": "chemistry",
+    "summary": "A chemistry lab technician whose interest in STEM began with a junior school chemistry teacher and hands-on experiments.",
+    "tags": [
+      "Chemistry",
+      "Lab Work",
+      "Precision"
+    ],
+    "takeaway": "Long-term focus and internal conviction can help students stay steady even when one difficult course or setback feels discouraging.",
+    "about": "Lisa works as a chemistry lab technician. Her work connects experimental design, careful lab practice, and precision, especially in technical environments where accuracy matters.",
+    "spark": "Her interest began with a friendly junior school chemistry teacher who used experiments to make chemistry feel exciting and understandable. She also became interested in nanotechnology because it connected to her strengths.",
+    "challenge": "She described communication challenges in professional environments, including aggressive feedback that was not clearly connected to her actual output. She also pointed to the difficulty of balancing high-intensity STEM work with household responsibilities.",
+    "setback": "A serious laboratory accident nearly cost her vision and made returning to experimental research psychologically difficult. The experience taught her that perseverance is not only about finishing tasks, but also about keeping courage after a major setback.",
+    "skill": "She is proud of earning her Master’s degree with honors. The skill she values most is disciplined experimental design and a commitment to precision, even when the work is complicated.",
+    "advice": "Focus on long-term goals instead of immediate academic perfection. Do not let one difficult course make you give up on an entire field. Pay attention to the subjects whose logic clicks for you.",
+    "links": ""
+  },
+  {
+    "id": "ariadne",
+    "name": "Ariadne Dulchinos",
+    "role": "Co-founder and CTO working in AI and healthcare technology",
+    "career": "ai and technology",
+    "field": "computer science and neuroscience",
+    "summary": "An MIT graduate combining computer science, neuroscience, AI, and healthcare data to build tools for real-world decision making.",
+    "tags": [
+      "AI",
+      "Healthcare Data",
+      "Computer Science"
+    ],
+    "takeaway": "Start building before you feel fully ready. Real projects, even messy ones, are one of the fastest ways to learn and stand out.",
+    "about": "Ariadne Dulchinos is an MIT graduate and co-founder/CTO of Avenir AI. Her background includes computer science, neuroscience, AI research, and healthcare data analytics.",
+    "spark": "She first came to STEM through storytelling, art, and world-building. Coding let her create video games with original characters, while neuroscience helped her understand the brain and intelligence.",
+    "challenge": "She described being underestimated as a young woman in technical leadership. Instead of spending energy trying to convince closed-minded people, she focuses on clarity, speed, execution, and results.",
+    "setback": "A major lesson came from realizing that a technically strong idea does not automatically create value. She learned to start with a painful real-world problem, not just with the solution.",
+    "skill": "She is proud of building a product used by large enterprise customers. She sees communication as the central skill: turning feedback into product decisions and building trust within a team.",
+    "advice": "Build real projects early, even if they are messy. Follow what genuinely interests you, and remember that depth in a niche can become more valuable than surface-level breadth.",
+    "links": ""
+  },
+  {
+    "id": "stephanie",
+    "name": "Stephanie Paul",
+    "role": "STEM leadership and communication coach",
+    "career": "leadership coaching",
+    "field": "stem leadership",
+    "summary": "A leadership and communication professional supporting STEM leaders with influence, clarity, and confidence under pressure.",
+    "tags": [
+      "Leadership",
+      "Communication",
+      "Coaching"
+    ],
+    "takeaway": "Technical brilliance is powerful, but communication, influence, and self-advocacy often determine whether ideas actually land.",
+    "about": "Stephanie Paul works with scientists, engineers, and technical leaders who are moving from expert contributor roles into leadership and communication-heavy roles.",
+    "spark": "Her work shifted toward women in STEM after seeing many technically strong women struggle with owning their voice, leadership presence, and confidence in male-dominated spaces.",
+    "challenge": "She described STEM as still affected by male-driven structures, unequal pay, and limited access to mentoring and leadership development. Her response is to meet barriers directly and keep advocating for women’s success.",
+    "setback": "Her main lesson is to adapt like water while refusing to accept that something is impossible. She frames obstacles as situations that require a different path, not a final stop.",
+    "skill": "She is proud of her clients’ success and publishing a book. Her strongest skill is listening, connecting with people, and helping others use practical tools to achieve their goals.",
+    "advice": "Support yourself with community, mentors, coaches, and strong networks. STEM is creative, and students should invest in their own growth and development.",
+    "links": "<div class=\"profile-section-label\">Optional links</div><p>LinkedIn and newsletter links were shared in the response, but they are kept secondary here so the profile stays focused on advice.</p>"
+  },
+  {
+    "id": "mady",
+    "name": "Mady Thompson",
+    "role": "PhD researcher in Biomedical Engineering",
+    "career": "biomedical engineering",
+    "field": "biomedical engineering",
+    "summary": "A biomedical engineering PhD researcher working on tissue engineering models for peripheral nerve injuries.",
+    "tags": [
+      "Biomedical Engineering",
+      "Research",
+      "Tissue Engineering"
+    ],
+    "takeaway": "STEM paths are not always linear. Failing quickly, staying curious, and keeping outside support can make the journey more sustainable.",
+    "about": "Mady Thompson is defending her PhD in Biomedical Engineering and works part time at 3DBioFibR. Her research uses tissue engineering to create 3D cell culture models of peripheral nerve injuries.",
+    "spark": "Her interest started with human biology and understanding how things work. High school biology strengthened her interest in cells, disease, and treatment. Later, a master’s supervisor introduced her to the potential of stem cells.",
+    "challenge": "She described being given extra administrative tasks, like taking notes or organizing events, and feeling that she must be doubly prepared to be taken seriously. She also noticed different expectations around professional appearance.",
+    "setback": "Her PhD taught her how to fail quickly. Many exploratory experiments fail, so she learned when to move on and when to stay the course.",
+    "skill": "She is proud of leadership and community-building awards because helping others matters to her. Curiosity is the skill she values most, especially when approaching problems and people.",
+    "advice": "Do not panic about choosing one perfect path. STEM fields are increasingly interdisciplinary, and many roads can lead to meaningful work. Ask professors or professionals questions because most people are happy to share their experiences.",
+    "links": ""
+  },
+  {
+    "id": "prathibha",
+    "name": "Prathibha Goonawardhana",
+    "role": "Project Manager in Digital Energy and founder",
+    "career": "digital energy",
+    "field": "electronic engineering",
+    "summary": "An electronic engineering and project management professional working across digital energy, automation, fintech, and entrepreneurship.",
+    "tags": [
+      "Electronic Engineering",
+      "Digital Energy",
+      "Project Management"
+    ],
+    "takeaway": "Difficult days do not last forever. Curiosity, people skills, and persistence can carry you through slow or unfair parts of the journey.",
+    "about": "Prathibha Goonawardhana works as a Project Manager in Schneider Electric’s Digital Energy Applications Center, delivering energy monitoring and automation solutions. Her career spans IT, electronics, digital energy, fintech, and entrepreneurship.",
+    "spark": "Her interest began with watching her grandfather repair electronics around the house. She became fascinated by circuits, broken devices, and how patience and curiosity could solve practical problems.",
+    "challenge": "Earlier in her career, she saw pay gaps, male-favoured hiring, and even postings asking for male candidates only. As a newcomer woman, mother, and founder, she has also experienced barriers around access to investors and funding.",
+    "setback": "A final-round government-sector interview became a lesson in representation. Even after strong preparation, the all-male panel focused on perceived gaps instead of potential. She learned that rejection can reflect the limitations of the room, not the candidate.",
+    "skill": "She is most proud of her family and the stable life she built across countries and challenges. Her key skill is connecting with people, building trust, and navigating difficult conversations.",
+    "advice": "Stay curious and keep pushing yourself. STEM changes quickly, so growth comes from trying new things, learning continuously, and taking on challenges even when they feel uncomfortable.",
+    "links": "<div class=\"profile-section-label\">Context note</div><p>She also shared a startup she is building. It is included as background only, not as the main focus of the profile.</p>"
+  },
+  {
+    "id": "divya",
+    "name": "Divya Chawla",
+    "role": "STEM professional focused on people-centered connection",
+    "career": "health and people-centered stem",
+    "field": "biology and health",
+    "summary": "A STEM professional whose interest began through her mother, a biology teacher, and whose work values communication and empathy.",
+    "tags": [
+      "Biology",
+      "Empathy",
+      "Communication"
+    ],
+    "takeaway": "Dream big and do not be afraid. A closed door can still lead to many other possibilities.",
+    "about": "Divya Chawla shared a STEM journey shaped by biology, personal connection, and the ability to engage with people at a human level.",
+    "spark": "Her interest in STEM began with her mother, who was a biology teacher. Her current field interest grew from the ability to connect and engage with people personally.",
+    "challenge": "She did not describe direct bias, but she identified balancing time between family and work as a challenge.",
+    "setback": "She shared the lesson that if one door closes, many others can open. Moving across continents twice also became part of her growth.",
+    "skill": "She values good communication and empathy as skills that support success.",
+    "advice": "Dream big, do not be afraid, and follow your dreams.",
+    "links": ""
+  },
+  {
+    "id": "saleena",
+    "name": "Saleena Djearam",
+    "role": "Family Physician",
+    "career": "medicine",
+    "field": "family medicine",
+    "summary": "A family physician whose interest in STEM began in middle school and developed into a long-term interest in medicine.",
+    "tags": [
+      "Medicine",
+      "Family Practice",
+      "Dedication"
+    ],
+    "takeaway": "A career in medicine can be demanding, but steady dedication and continuous learning help sustain the journey.",
+    "about": "Saleena Djearam works as a family physician. Her work focuses on patient care and the ongoing growth required in medicine.",
+    "spark": "Her interest began in middle school, and she had always been drawn to the medical field.",
+    "challenge": "She did not describe major bias or a specific challenge, but she noted that the field requires dedication and does not allow for long breaks from learning.",
+    "setback": "She did not identify a major setback in the response.",
+    "skill": "She is proud of patient satisfaction and values keeping up to date with medical knowledge, along with dedication.",
+    "advice": "When you have a goal, keep working toward it. Medicine is an interesting field with immense growth.",
+    "links": ""
+  },
+  {
+    "id": "priyanka",
+    "name": "Priyanka Gupta",
+    "role": "Senior Technical Architect with the Province of British Columbia",
+    "career": "systems architecture",
+    "field": "technology and network systems",
+    "summary": "A senior technical architect designing robust systems and network applications that support reliable connectivity services.",
+    "tags": [
+      "Architecture",
+      "Networks",
+      "Problem Solving"
+    ],
+    "takeaway": "Do not mistake a loud voice for a correct one. Trust your own logic and speak up before silence becomes the bigger risk.",
+    "about": "Priyanka Gupta helps design robust systems and network applications to provide uninterrupted network connectivity services to British Columbians.",
+    "spark": "Her STEM interest began with childhood curiosity about evaporation. Her deeper interest in technology came from using recursion, stacks, queues, linked lists, and relational databases to solve problems.",
+    "challenge": "She described being underestimated in technical environments and feeling isolated as the only woman in deeply technical architecture discussions. She learned to stay grounded in competence and claim space at the table.",
+    "setback": "During a critical application migration, she noticed a possible software bug but hesitated to voice it. The application failed shortly after going live, teaching her that holding back can harm the team and the system.",
+    "skill": "She is proud of stepping into her manager’s position and translating complex technical ideas for both junior programmers and executive leaders. Her key skill is working with people without ego and focusing on the system.",
+    "advice": "Trust your own logic. Do not wait until you feel completely perfect to speak up. Your voice belongs at the table, and you should not give up.",
+    "links": ""
+  },
+  {
+    "id": "tania",
+    "name": "Tania Chaudhry",
+    "role": "Medicine and Health professional",
+    "career": "medicine and health",
+    "field": "clinical medicine",
+    "summary": "A medicine and health professional whose interest came from fascination with science and a desire to serve the community.",
+    "tags": [
+      "Medicine",
+      "Health",
+      "Communication"
+    ],
+    "takeaway": "Leadership challenges become easier to handle when you understand both your strengths and weaknesses.",
+    "about": "Tania Chaudhry works in medicine and health, with experience connected to general practice and clinical teaching.",
+    "spark": "Science was always fascinating to her. She was drawn to the field because it allowed her to be useful to the community while also building career stability.",
+    "challenge": "She did not describe direct bias. She noted that leadership roles can be challenging, especially when learning how to understand strengths and weaknesses.",
+    "setback": "Leadership challenges taught her the importance of knowing herself and growing from responsibility.",
+    "skill": "She is proud of being a GP and a clinical tutor. Communication is the skill she identifies as important to her success.",
+    "advice": "There is nothing that cannot be achieved. Work hard, try your best, and the rest will become easier.",
+    "links": ""
+  },
+  {
+    "id": "michelle",
+    "name": "Michelle Pinheiro",
+    "role": "Physician and Coroner",
+    "career": "medicine and public health",
+    "field": "medicine and women’s health",
+    "summary": "A physician and coroner motivated by science, compassion, and improving access and equity in women’s health.",
+    "tags": [
+      "Medicine",
+      "Equity",
+      "Persistence"
+    ],
+    "takeaway": "Setbacks are part of the experience. Keep learning, advocate for yourself, and do not take every barrier personally.",
+    "about": "Michelle Pinheiro is a physician and coroner. Her STEM path combines biology, chemistry, technology, diagnosis, treatment, and compassion.",
+    "spark": "Her interest in STEM comes from using science to understand and improve human health. Her current focus is improving access and reducing inequality in women’s health.",
+    "challenge": "She described being compared to her physician husband and unfairly judged through gender stereotypes. She also faced the challenge of balancing motherhood with career expectations in a field with limited support for family planning.",
+    "setback": "During residency, pregnancy limited opportunities that others received. The experience taught her to advocate for herself and persevere; she later became the only resident in her year accepted into a surgical fellowship.",
+    "skill": "She is proud of being part of an advocacy group in Brazil that changed women’s rights during medical residency. Persistence is the skill she values most.",
+    "advice": "Remember that you are constantly learning. Setbacks are part of the experience, so keep moving forward.",
+    "links": ""
+  },
+  {
+    "id": "adedolapo",
+    "name": "Dr. Adedolapo Ibikunle",
+    "role": "Family Physician",
+    "career": "medicine",
+    "field": "family medicine",
+    "summary": "A family physician whose curiosity about why people get sick grew into a career in clinical care.",
+    "tags": [
+      "Medicine",
+      "Resilience",
+      "Clinical Judgment"
+    ],
+    "takeaway": "Resilience can appear during the hardest moments, and it can become a reason to keep going.",
+    "about": "Dr. Adedolapo Ibikunle works as a family physician, using clinical judgment to care for patients and understand illness.",
+    "spark": "Her interest began with curiosity about why people fall sick and how the body works.",
+    "challenge": "She described being underestimated at times and handled it by staying consistent, professional, and allowing her work to change people’s perceptions.",
+    "setback": "She had to write a medical exam during her fourth year of medical school within two months of losing a loved one. The experience revealed her resilience and strengthened her desire to succeed.",
+    "skill": "She is proud of being a mother to her three children. Good clinical judgment is the skill she sees as central to her success.",
+    "advice": "Study smarter, not harder. Stay happy every day, ask questions, and stay curious.",
+    "links": ""
+  },
+  {
+    "id": "sumati",
+    "name": "Sumati Chawla",
+    "role": "Leading Teacher supporting STEM sessions",
+    "career": "stem education",
+    "field": "education and stem outreach",
+    "summary": "An educator supporting teachers and students through inquiry-based, hands-on STEM learning.",
+    "tags": [
+      "Education",
+      "STEM Outreach",
+      "Curiosity"
+    ],
+    "takeaway": "Strong plans matter, but successful change also depends on bringing people with you.",
+    "about": "Sumati Chawla is a leading teacher at a special school and supports teachers in running STEM sessions.",
+    "spark": "She was drawn to the hands-on nature of STEM and how it connects learning to real-life situations. Her interest in education came from wanting to help children and young people learn, grow, and reach their potential.",
+    "challenge": "She did not describe direct bias, but she identified the challenge of encouraging participation and confidence, especially among girls who may not initially see themselves in STEM.",
+    "setback": "Early in leadership, she focused heavily on plans and timelines without building enough staff understanding and ownership. The result was slower, inconsistent implementation, teaching her that change management is about bringing people with you.",
+    "skill": "She is proud of building staff capacity. Relationships are the skill she sees as central to success.",
+    "advice": "Do not be afraid to ask questions. Stay curious, take risks, and do not be afraid of making mistakes because STEM is built on problem-solving and trial and error.",
+    "links": ""
+  },
+  {
+    "id": "esha",
+    "name": "Dr. Esha Kaushik-Chakraborti",
+    "role": "Registered Psychologist and educator",
+    "career": "psychology and mental health",
+    "field": "clinical psychology",
+    "summary": "A registered psychologist working across youth mental health, graduate education, private practice, and financial trauma support.",
+    "tags": [
+      "Psychology",
+      "Mental Health",
+      "Adaptability"
+    ],
+    "takeaway": "Collect varied experiences, stay adaptable, and learn to pace yourself instead of burning out.",
+    "about": "Dr. Esha Kaushik-Chakraborti is a registered psychologist licensed across BC, Ontario, and Alberta. She works in youth mental health, teaches future therapists, runs a part-time private practice, and is building a community initiative around financial shame.",
+    "spark": "She originally began university in pre-med and dreamed of becoming a gynecologist with Doctors Without Borders. Crisis line volunteering made the pull toward psychology and supporting people in vulnerable moments feel more alive than her original path.",
+    "challenge": "She described being underestimated as a young woman in crisis-response spaces and later being challenged on her knowledge and authority while teaching. She handles this by staying grounded in expertise while maintaining warmth and self-awareness.",
+    "setback": "Her residency match process was disrupted by unexpected political and bureaucratic delays, risking a lost year of progress. The experience taught adaptability, resilience, and how to keep purpose steady when systems stall.",
+    "skill": "She is proud of being invited back to her alma mater to speak about Money Mind Relief. Perseverance, adaptability, community practice, and authentic networking support her success.",
+    "advice": "Say yes to varied experiences, even ones that seem unrelated. In higher education, give consistent effort and learn to pace yourself instead of relying on last-minute cramming.",
+    "links": "<div class=\"profile-section-label\">Context note</div><p>She shared Money Mind Relief as a community initiative connected to clinical psychology and financial trauma. It is included as background only.</p>"
+  },
+  {
+    "id": "mitali",
+    "name": "Mitali Sharma",
+    "role": "Kinesiology graduate",
+    "career": "kinesiology and health science",
+    "field": "kinesiology",
+    "summary": "A University of Waterloo kinesiology graduate who values human anatomy, physiology, community involvement, and trying new opportunities.",
+    "tags": [
+      "Kinesiology",
+      "Health Science",
+      "Networking"
+    ],
+    "takeaway": "Trying new things can reveal unexpected fields you love. Connections and involvement matter more than staying comfortable.",
+    "about": "Mitali Sharma is a recent University of Waterloo graduate with an Honours Bachelor of Science in Kinesiology.",
+    "spark": "Her interest in STEM grew through middle and high school. While applying to university, she discovered kinesiology and realized her strongest interests were in human anatomy and physiology.",
+    "challenge": "As a student, she experienced bias and underestimation from peers. She found that staying confident and demonstrating skill through work was the best way to gain respect.",
+    "setback": "In high school, she organized a ticketed online dance-class fundraiser. No one attended the class, but she still exceeded her fundraising goal, teaching her that an event can feel disappointing and still succeed in its real purpose.",
+    "skill": "She is proud of graduating while balancing a full course load, volunteering, research, hospital work, dance, and photography. Being proactive helps her find opportunities and build connections.",
+    "advice": "Network more, get involved, and do not be afraid to try new things. There is something to learn from every opportunity if you are willing to try.",
+    "links": ""
+  },
+  {
+    "id": "nina",
+    "name": "Nina Padme Eufracio Rojas",
+    "role": "Scientist in training and STEM outreach founder",
+    "career": "research and stem outreach",
+    "field": "molecular biology, ai, and space science",
+    "summary": "A young scientist working across molecular biology, epigenetics, AI, space science, and science access in Latin America.",
+    "tags": [
+      "Molecular Biology",
+      "AI",
+      "Space Science"
+    ],
+    "takeaway": "Science should not depend on privilege. Start with questions, build from the basics, and do not wait for perfect access to begin.",
+    "about": "Nina Padme Eufracio Rojas is a scientist in training and founder of ALEBRIJES International STEM. Her work connects frontier science with science education, outreach, olympiads, and access for young people in Mexico and Latin America.",
+    "spark": "She began competing in physics and mathematics Olympiads when she was young. Biology and chemistry were harder at first, but her dream of advancing medicine pushed her to see them as languages for understanding life, disease, cells, and healing.",
+    "challenge": "She described being underestimated because of age, gender, and coming from contexts where high-impact scientific projects are not always expected. Her response has been to work with discipline, document results, prepare deeply, and build a path that speaks for itself.",
+    "setback": "She learned that research and life rarely follow the exact plan. Incomplete results, rejected applications, mistakes, and closed doors taught her to correct methodology, ask for help, study again, and see setbacks as redirection rather than the end.",
+    "skill": "She is proud of founding ALEBRIJES International STEM and helping thousands of young people discover science. Learning quickly and connecting disciplines are the skills that support her work across biology, chemistry, AI, advanced materials, and space science.",
+    "advice": "Do not wait for a great university or perfect lab to begin. Start with a question, read, look for programs, contact researchers, do small projects, document ideas, and do not be ashamed to learn from the basics.",
+    "links": ""
+  },
+  {
+    "id": "sagaidak",
+    "name": "Dr. Sagaidak",
+    "role": "Family Doctor",
+    "career": "medicine",
+    "field": "family medicine",
+    "summary": "A family doctor working primarily in Edmonton and sometimes in the Northwest Territories, with a path shaped by life sciences and patient care.",
+    "tags": [
+      "Medicine",
+      "Family Practice",
+      "Balance"
+    ],
+    "takeaway": "Perseverance matters, but long-term health also requires balance, loved ones, and hobbies outside school.",
+    "about": "Dr. Sagaidak is a family doctor who works primarily in Edmonton, Alberta and sometimes in the Northwest Territories.",
+    "spark": "She enjoyed science courses in high school and studied Life Sciences at the University of Toronto. During university, she found the human body interesting and enjoyed helping others, which made medicine feel like a strong fit.",
+    "challenge": "During residency, she sometimes found that patients took male co-residents’ recommendations more seriously or did not immediately recognize her as one of their physicians. She corrected mistakes and found assertiveness helpful.",
+    "setback": "Focusing too much on school sometimes led to burnout. She learned that balance, loved ones, and hobbies are important for long-term health.",
+    "skill": "She is proud of being accepted to medical school. Perseverance is the skill she sees as important because the road can be long.",
+    "advice": "Believe in yourself and do not compare yourself to others. If you truly enjoy the field, do not let people discourage you by saying it is too hard.",
+    "links": ""
+  }
 ];
 
 function initials(name) {
@@ -562,6 +883,26 @@ function initials(name) {
 
 function makeTag(t) {
   return `<span class="tag">${t}</span>`;
+}
+
+function labelFor(value) {
+  return value
+    .split(' ')
+    .map(word => word.length ? word[0].toUpperCase() + word.slice(1) : word)
+    .join(' ');
+}
+
+function populateFilters() {
+  const careerFilter = document.getElementById('careerFilter');
+  const fieldFilter = document.getElementById('fieldFilter');
+  const careers = [...new Set(profiles.map(p => p.career))].sort();
+  const fields = [...new Set(profiles.map(p => p.field))].sort();
+
+  careerFilter.innerHTML = '<option value="all">All careers</option>' +
+    careers.map(c => `<option value="${c}">${labelFor(c)}</option>`).join('');
+
+  fieldFilter.innerHTML = '<option value="all">All fields of study</option>' +
+    fields.map(f => `<option value="${f}">${labelFor(f)}</option>`).join('');
 }
 
 function renderPeople() {
@@ -644,6 +985,7 @@ document.getElementById('searchInput').addEventListener('input', filterPeople);
 document.getElementById('careerFilter').addEventListener('change', filterPeople);
 document.getElementById('fieldFilter').addEventListener('change', filterPeople);
 
+populateFilters();
 renderPeople();
 renderSpotlights();
 </script>
