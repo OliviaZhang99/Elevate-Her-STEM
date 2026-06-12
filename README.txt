@@ -1,1 +1,1 @@
-Open index.html first. Keep all HTML files in the same folder. This version has CSS and JavaScript built into each page, so it should work even if asset folders are not copied.
+Updated separated files for Elevate Her STEM. Replace the old index.html and data.js with these updated files.
