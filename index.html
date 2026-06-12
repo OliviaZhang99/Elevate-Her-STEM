@@ -260,6 +260,7 @@
     }
     .profile-section p { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.7; }
     .profile-links { font-size: 0.85rem; color: var(--ink-muted); }
+    #detailLinks { display: none; }
 
     /* ── SPOTLIGHT PAGE ── */
     .spotlight-grid { display: flex; flex-direction: column; gap: 14px; }
@@ -891,6 +892,35 @@ function makeTag(t) {
   return `<span class="tag">${t}</span>`;
 }
 
+function normalizeForAlphabet(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim();
+}
+
+function nameSortKey(profile) {
+  // Sort by English last name first. For future multilingual names,
+  // add a sortName field such as "Zhang Olivia" or "Rojas Nina Padme Eufracio".
+  if (profile.sortName) return normalizeForAlphabet(profile.sortName);
+
+  let cleaned = String(profile.name || '')
+    .replace(/^(dr\.?|doctor|prof\.?|professor|ms\.?|mrs\.?|miss)\s+/i, '')
+    .trim();
+  const parts = cleaned.split(/\s+/).filter(Boolean);
+  if (parts.length <= 1) return normalizeForAlphabet(cleaned);
+
+  const last = parts[parts.length - 1];
+  const firstMiddle = parts.slice(0, -1).join(' ');
+  return normalizeForAlphabet(`${last} ${firstMiddle}`);
+}
+
+const alphabeticalProfiles = [...profiles].sort((a, b) =>
+  nameSortKey(a).localeCompare(nameSortKey(b), 'en', { sensitivity: 'base' })
+);
+
 function labelFor(value) {
   return value
     .split(' ')
@@ -901,8 +931,8 @@ function labelFor(value) {
 function populateFilters() {
   const careerFilter = document.getElementById('careerFilter');
   const fieldFilter = document.getElementById('fieldFilter');
-  const careers = [...new Set(profiles.map(p => p.career))].sort();
-  const fields = [...new Set(profiles.map(p => p.field))].sort();
+  const careers = [...new Set(alphabeticalProfiles.map(p => p.career))].sort();
+  const fields = [...new Set(alphabeticalProfiles.map(p => p.field))].sort();
 
   careerFilter.innerHTML = '<option value="all">All careers</option>' +
     careers.map(c => `<option value="${c}">${labelFor(c)}</option>`).join('');
@@ -913,7 +943,7 @@ function populateFilters() {
 
 function renderPeople() {
   const grid = document.getElementById('peopleGrid');
-  grid.innerHTML = profiles.map(p => `
+  grid.innerHTML = alphabeticalProfiles.map(p => `
     <div class="person-card" data-profile="${p.id}" data-name="${p.name.toLowerCase()}" data-career="${p.career}" data-field="${p.field}" data-keywords="${(p.tags.join(' ')+' '+p.summary+' '+p.role).toLowerCase()}">
       <div class="person-initials">${initials(p.name)}</div>
       <div class="person-name">${p.name}</div>
@@ -930,7 +960,7 @@ function renderPeople() {
 }
 
 function renderSpotlights() {
-  document.getElementById('spotlightList').innerHTML = profiles.map(p => `
+  document.getElementById('spotlightList').innerHTML = alphabeticalProfiles.map(p => `
     <div class="quote-card">
       <p>"${p.advice}"</p>
       <cite>${p.name} &nbsp;·&nbsp; ${p.role}</cite>
@@ -952,8 +982,17 @@ function openProfile(id) {
   document.getElementById('detailSetback').textContent = p.setback;
   document.getElementById('detailSkill').textContent = p.skill;
   document.getElementById('detailAdvice').textContent = p.advice;
-  document.getElementById('detailLinks').innerHTML = p.links;
   document.getElementById('detailTags').innerHTML = p.tags.map(makeTag).join('');
+
+  const linksEl = document.getElementById('detailLinks');
+  if (p.links && p.links.trim() !== '') {
+    linksEl.innerHTML = p.links;
+    linksEl.style.display = 'block';
+  } else {
+    linksEl.innerHTML = '';
+    linksEl.style.display = 'none';
+  }
+
   showPage('profile');
 }
 
