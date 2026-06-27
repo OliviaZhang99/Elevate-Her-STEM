@@ -19,7 +19,7 @@
         <li><a href="about.html" class="">About</a></li>
         <li><a href="mission.html" class="">Mission</a></li>
         <li><a href="stories.html" class="">Stories</a></li>
-        <li><a href="people.html" class="active">People</a></li>
+        <li><a href="people.html" class="active">Profiles</a></li>
         <li><a href="contribute.html" class="">Contribute</a></li>
       </ul>
     </nav>
@@ -50,10 +50,11 @@ function escapeHTML(value) {
   return String(value || '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[char]));
 }
 function initials(name) {
+  const match = String(name || '').match(/Anonymous Profile\s+(\d+)/i);
+  if (match) return match[1];
   const clean = String(name || '').replace(/\([^)]*\)/g, '').replace(/^(Dr\.?|Professor|Prof\.?|Ms\.?|Mrs\.?|Mr\.?)\s+/i, '').trim();
-  const words = clean.split(/\s+/).filter(Boolean);
-  if (!words.length) return '?';
-  return words.slice(0, 2).map(word => word[0]).join('').toUpperCase();
+  const parts = clean.split(/\s+/).filter(Boolean);
+  return (parts.map(w => w[0]).join('').slice(0,2) || '?').toUpperCase();
 }
 function makeTag(tag) { return `<span class="tag">${escapeHTML(tag)}</span>`; }
 function renderProfile() {

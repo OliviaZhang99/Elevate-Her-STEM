@@ -19,7 +19,7 @@
         <li><a href="about.html" class="">About</a></li>
         <li><a href="mission.html" class="">Mission</a></li>
         <li><a href="stories.html" class="">Stories</a></li>
-        <li><a href="people.html" class="active">People</a></li>
+        <li><a href="people.html" class="active">Profiles</a></li>
         <li><a href="contribute.html" class="">Contribute</a></li>
       </ul>
     </nav>
@@ -29,11 +29,11 @@
 
 <section class="page">
   <div class="section-head">
-    <h2>Browse People</h2>
-    <p>Search by name or filter by career area and field. Names from Chinese-language responses are shown in pinyin first, with the original Chinese name in parentheses when provided.</p>
+    <h2>Browse Profiles</h2>
+    <p>Profiles are anonymized. Search by role, field, theme, or keyword, or filter by career area and field.</p>
   </div>
   <div class="filter-row">
-    <input type="text" id="searchInput" placeholder="Search by name, theme, or keyword…">
+    <input type="text" id="searchInput" placeholder="Search by role, theme, or keyword…">
     <select id="careerFilter"><option value="all">All careers</option></select>
     <select id="fieldFilter"><option value="all">All fields</option></select>
   </div>
@@ -48,10 +48,11 @@ function escapeHTML(value) {
   return String(value || '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[char]));
 }
 function initials(name) {
+  const match = String(name || '').match(/Anonymous Profile\s+(\d+)/i);
+  if (match) return match[1];
   const clean = String(name || '').replace(/\([^)]*\)/g, '').replace(/^(Dr\.?|Professor|Prof\.?|Ms\.?|Mrs\.?|Mr\.?)\s+/i, '').trim();
-  const words = clean.split(/\s+/).filter(Boolean);
-  if (!words.length) return '?';
-  return words.slice(0, 2).map(word => word[0]).join('').toUpperCase();
+  const parts = clean.split(/\s+/).filter(Boolean);
+  return (parts.map(w => w[0]).join('').slice(0,2) || '?').toUpperCase();
 }
 function makeTag(tag) { return `<span class="tag">${escapeHTML(tag)}</span>`; }
 function populateFilters() {
@@ -64,7 +65,7 @@ function populateFilters() {
 }
 function renderPeople() {
   document.getElementById('peopleGrid').innerHTML = profiles.map(p => {
-    const keywords = [p.name, p.role, p.career, p.field, p.summary, p.takeaway, ...(p.tags || [])].join(' ').toLowerCase();
+    const keywords = [p.role, p.career, p.field, p.summary, p.takeaway, ...(p.tags || [])].join(' ').toLowerCase();
     return `<a class="person-card" href="profile.html?id=${encodeURIComponent(p.id)}" data-name="${escapeHTML(p.name.toLowerCase())}" data-career="${escapeHTML((p.career || '').toLowerCase())}" data-field="${escapeHTML((p.field || '').toLowerCase())}" data-keywords="${escapeHTML(keywords)}">
       <div class="person-initials">${escapeHTML(initials(p.name))}</div>
       <div class="person-name">${escapeHTML(p.name)}</div>

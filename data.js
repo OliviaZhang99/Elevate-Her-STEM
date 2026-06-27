@@ -1,7 +1,7 @@
 const profiles = [
   {
-    "id": "esha",
-    "name": "Dr. Esha Kaushik-Chakraborti",
+    "id": "profile-01",
+    "name": "Anonymous Profile 01",
     "role": "Registered Psychologist and educator",
     "career": "Psychology And Mental Health",
     "field": "Clinical Psychology",
@@ -15,7 +15,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Dr. Esha Kaushik-Chakraborti is a registered psychologist licensed across BC, Ontario, and Alberta. She works in youth mental health, teaches future therapists, runs a part-time private practice, and is building a community initiative around financial shame."
+        "text": "This respondent is a registered psychologist licensed across BC, Ontario, and Alberta. She works in youth mental health, teaches future therapists, runs a part-time private practice, and is building a community initiative around financial shame."
       },
       {
         "label": "What sparked their interest",
@@ -38,11 +38,11 @@ const profiles = [
         "text": "Say yes to varied experiences, even ones that seem unrelated. In higher education, give consistent effort and learn to pace yourself instead of relying on last-minute cramming."
       }
     ],
-    "sortKey": "chakraborti esha kaushik"
+    "sortKey": "anonymous profile 01"
   },
   {
-    "id": "tania",
-    "name": "Tania Chaudhry",
+    "id": "profile-02",
+    "name": "Anonymous Profile 02",
     "role": "Medicine and Health professional",
     "career": "Medicine And Health",
     "field": "Clinical Medicine",
@@ -56,7 +56,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Tania Chaudhry works in medicine and health, with experience connected to general practice and clinical teaching."
+        "text": "This respondent works in medicine and health, with experience connected to general practice and clinical teaching."
       },
       {
         "label": "What sparked their interest",
@@ -79,11 +79,11 @@ const profiles = [
         "text": "There is nothing that cannot be achieved. Work hard, try your best, and the rest will become easier."
       }
     ],
-    "sortKey": "chaudhry tania"
+    "sortKey": "anonymous profile 02"
   },
   {
-    "id": "divya",
-    "name": "Divya Chawla",
+    "id": "profile-03",
+    "name": "Anonymous Profile 03",
     "role": "STEM professional focused on people-centered connection",
     "career": "Health And People-Centered Stem",
     "field": "Biology And Health",
@@ -97,7 +97,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Divya Chawla shared a STEM journey shaped by biology, personal connection, and the ability to engage with people at a human level."
+        "text": "This respondent shared a STEM journey shaped by biology, personal connection, and the ability to engage with people at a human level."
       },
       {
         "label": "What sparked their interest",
@@ -120,11 +120,11 @@ const profiles = [
         "text": "Dream big, do not be afraid, and follow your dreams."
       }
     ],
-    "sortKey": "chawla divya"
+    "sortKey": "anonymous profile 03"
   },
   {
-    "id": "sumati",
-    "name": "Sumati Chawla",
+    "id": "profile-04",
+    "name": "Anonymous Profile 04",
     "role": "Leading Teacher supporting STEM sessions",
     "career": "Stem Education",
     "field": "Education And Stem Outreach",
@@ -138,7 +138,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Sumati Chawla is a leading teacher at a special school and supports teachers in running STEM sessions."
+        "text": "This respondent is a leading teacher at a special school and supports teachers in running STEM sessions."
       },
       {
         "label": "What sparked their interest",
@@ -161,13 +161,13 @@ const profiles = [
         "text": "Do not be afraid to ask questions. Stay curious, take risks, and do not be afraid of making mistakes because STEM is built on problem-solving and trial and error."
       }
     ],
-    "sortKey": "chawla sumati"
+    "sortKey": "anonymous profile 04"
   },
   {
-    "id": "competition-service-center-minister",
-    "name": "Competition Service Center Minister",
-    "sortKey": "competition service center minister",
-    "role": "Competition Service Center Minister",
+    "id": "profile-05",
+    "name": "Anonymous Profile 05",
+    "sortKey": "anonymous profile 05",
+    "role": "This respondent",
     "career": "STEM Education",
     "field": "Physics",
     "summary": "A student leader who emphasizes logic, learning methods, and repeated practice in physics.",
@@ -213,8 +213,8 @@ const profiles = [
     ]
   },
   {
-    "id": "saleena",
-    "name": "Saleena Djearam",
+    "id": "profile-06",
+    "name": "Anonymous Profile 06",
     "role": "Family Physician",
     "career": "Medicine",
     "field": "Family Medicine",
@@ -228,7 +228,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Saleena Djearam works as a family physician. Her work focuses on patient care and the ongoing growth required in medicine."
+        "text": "This respondent works as a family physician. Her work focuses on patient care and the ongoing growth required in medicine."
       },
       {
         "label": "What sparked their interest",
@@ -251,11 +251,11 @@ const profiles = [
         "text": "When you have a goal, keep working toward it. Medicine is an interesting field with immense growth."
       }
     ],
-    "sortKey": "djearam saleena"
+    "sortKey": "anonymous profile 06"
   },
   {
-    "id": "ariadne",
-    "name": "Ariadne Dulchinos",
+    "id": "profile-07",
+    "name": "Anonymous Profile 07",
     "role": "Co-founder and CTO working in AI and healthcare technology",
     "career": "Ai And Technology",
     "field": "Computer Science And Neuroscience",
@@ -269,7 +269,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Ariadne Dulchinos is an MIT graduate and co-founder/CTO of Avenir AI. Her background includes computer science, neuroscience, AI research, and healthcare data analytics."
+        "text": "This respondent is an MIT graduate and co-founder/CTO of Avenir AI. Her background includes computer science, neuroscience, AI research, and healthcare data analytics."
       },
       {
         "label": "What sparked their interest",
@@ -292,13 +292,13 @@ const profiles = [
         "text": "Build real projects early, even if they are messy. Follow what genuinely interests you, and remember that depth in a niche can become more valuable than surface-level breadth."
       }
     ],
-    "sortKey": "dulchinos ariadne"
+    "sortKey": "anonymous profile 07"
   },
   {
-    "id": "electrical-engineer-cn",
-    "name": "Electrical Engineer",
-    "sortKey": "electrical engineer cn",
-    "role": "Electrical Engineer",
+    "id": "profile-08",
+    "name": "Anonymous Profile 08",
+    "sortKey": "anonymous profile 08",
+    "role": "This respondent",
     "career": "Engineering",
     "field": "Electrical Engineering",
     "summary": "An electrical engineer who loves electromagnetism, circuits, and continuous exploration of new knowledge.",
@@ -352,10 +352,10 @@ const profiles = [
     ]
   },
   {
-    "id": "engineer",
-    "name": "Engineer",
-    "sortKey": "engineer",
-    "role": "Engineer",
+    "id": "profile-09",
+    "name": "Anonymous Profile 09",
+    "sortKey": "anonymous profile 09",
+    "role": "This respondent",
     "career": "Engineering",
     "field": "Engineering Design",
     "summary": "An engineer whose interest began with mathematics and physics and who emphasizes professional mastery and career planning.",
@@ -401,10 +401,10 @@ const profiles = [
     ]
   },
   {
-    "id": "gao-lulu",
-    "name": "Gao Lulu (高露露)",
-    "sortKey": "gao lulu",
-    "role": "Student",
+    "id": "profile-10",
+    "name": "Anonymous Profile 10",
+    "sortKey": "anonymous profile 10",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A student whose interest comes from physics experiment phenomena and who values practical skills.",
@@ -417,7 +417,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Gao Lulu is a student."
+        "text": "This respondent is a student."
       },
       {
         "label": "What sparked their interest",
@@ -446,8 +446,8 @@ const profiles = [
     ]
   },
   {
-    "id": "prathibha",
-    "name": "Prathibha Goonawardhana",
+    "id": "profile-11",
+    "name": "Anonymous Profile 11",
     "role": "Project Manager in Digital Energy and founder",
     "career": "Digital Energy",
     "field": "Electronic Engineering",
@@ -461,7 +461,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Prathibha Goonawardhana works as a Project Manager in Schneider Electric’s Digital Energy Applications Center, delivering energy monitoring and automation solutions. Her career spans IT, electronics, digital energy, fintech, and entrepreneurship."
+        "text": "This respondent works as a Project Manager in Schneider Electric’s Digital Energy Applications Center, delivering energy monitoring and automation solutions. Her career spans IT, electronics, digital energy, fintech, and entrepreneurship."
       },
       {
         "label": "What sparked their interest",
@@ -488,11 +488,11 @@ const profiles = [
         "text": "Context note She also shared a startup she is building. It is included as background only, not as the main focus of the profile."
       }
     ],
-    "sortKey": "goonawardhana prathibha"
+    "sortKey": "anonymous profile 11"
   },
   {
-    "id": "priyanka",
-    "name": "Priyanka Gupta",
+    "id": "profile-12",
+    "name": "Anonymous Profile 12",
     "role": "Senior Technical Architect with the Province of British Columbia",
     "career": "Systems Architecture",
     "field": "Technology And Network Systems",
@@ -506,7 +506,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Priyanka Gupta helps design robust systems and network applications to provide uninterrupted network connectivity services to British Columbians."
+        "text": "This respondent helps design robust systems and network applications to provide uninterrupted network connectivity services to British Columbians."
       },
       {
         "label": "What sparked their interest",
@@ -529,12 +529,12 @@ const profiles = [
         "text": "Trust your own logic. Do not wait until you feel completely perfect to speak up. Your voice belongs at the table, and you should not give up."
       }
     ],
-    "sortKey": "gupta priyanka"
+    "sortKey": "anonymous profile 12"
   },
   {
-    "id": "vivian-hong",
-    "name": "Vivian Hong",
-    "sortKey": "hong vivian",
+    "id": "profile-13",
+    "name": "Anonymous Profile 13",
+    "sortKey": "anonymous profile 13",
     "role": "Accounting Professional",
     "career": "Accounting and Finance",
     "field": "Accounting",
@@ -548,7 +548,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Vivian Hong works in accounting."
+        "text": "This respondent works in accounting."
       },
       {
         "label": "What sparked their interest",
@@ -585,8 +585,8 @@ const profiles = [
     ]
   },
   {
-    "id": "adedolapo",
-    "name": "Dr. Adedolapo Ibikunle",
+    "id": "profile-14",
+    "name": "Anonymous Profile 14",
     "role": "Family Physician",
     "career": "Medicine",
     "field": "Family Medicine",
@@ -600,7 +600,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Dr. Adedolapo Ibikunle works as a family physician, using clinical judgment to care for patients and understand illness."
+        "text": "This respondent works as a family physician, using clinical judgment to care for patients and understand illness."
       },
       {
         "label": "What sparked their interest",
@@ -623,12 +623,12 @@ const profiles = [
         "text": "Study smarter, not harder. Stay happy every day, ask questions, and stay curious."
       }
     ],
-    "sortKey": "ibikunle adedolapo"
+    "sortKey": "anonymous profile 14"
   },
   {
-    "id": "jiang-xin",
-    "name": "Jiang Xin (姜鑫)",
-    "sortKey": "jiang xin",
+    "id": "profile-15",
+    "name": "Anonymous Profile 15",
+    "sortKey": "anonymous profile 15",
     "role": "University Lecturer",
     "career": "Engineering Education",
     "field": "Power Engineering and Engineering Thermophysics",
@@ -642,7 +642,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Jiang Xin studies power engineering and engineering thermophysics and currently works as a university lecturer."
+        "text": "This respondent studies power engineering and engineering thermophysics and currently works as a university lecturer."
       },
       {
         "label": "What sparked their interest",
@@ -679,10 +679,10 @@ const profiles = [
     ]
   },
   {
-    "id": "li-bin",
-    "name": "Li Bin (李玢)",
-    "sortKey": "li bin",
-    "role": "Senior Water Supply and Drainage Design Engineer",
+    "id": "profile-16",
+    "name": "Anonymous Profile 16",
+    "sortKey": "anonymous profile 16",
+    "role": "Senior Water Supply and Drainage Design This respondent",
     "career": "Engineering",
     "field": "Water Supply and Drainage Engineering",
     "summary": "A senior design engineer who applies mathematics, physics, drafting, and practical site experience to complex infrastructure projects.",
@@ -695,7 +695,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Li Bin is a senior water supply and drainage design engineer."
+        "text": "This respondent is a senior water supply and drainage design engineer."
       },
       {
         "label": "What sparked their interest",
@@ -740,10 +740,10 @@ const profiles = [
     ]
   },
   {
-    "id": "li-congcong",
-    "name": "Li Congcong (李聪聪)",
-    "sortKey": "li congcong",
-    "role": "Physics Student",
+    "id": "profile-17",
+    "name": "Anonymous Profile 17",
+    "sortKey": "anonymous profile 17",
+    "role": "Physics This respondent",
     "career": "Physics",
     "field": "Physics",
     "summary": "A physics student whose interest comes from exploring patterns and laws in the world.",
@@ -756,7 +756,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Li Congcong is a physics student."
+        "text": "This respondent is a physics student."
       },
       {
         "label": "What sparked their interest",
@@ -793,9 +793,9 @@ const profiles = [
     ]
   },
   {
-    "id": "li-nan",
-    "name": "Li Nan (李楠)",
-    "sortKey": "li nan",
+    "id": "profile-18",
+    "name": "Anonymous Profile 18",
+    "sortKey": "anonymous profile 18",
     "role": "Teacher",
     "career": "STEM Education",
     "field": "Physics and Applied Learning",
@@ -809,7 +809,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Li Nan is a teacher."
+        "text": "This respondent is a teacher."
       },
       {
         "label": "What sparked their interest",
@@ -846,9 +846,9 @@ const profiles = [
     ]
   },
   {
-    "id": "li-shanshan",
-    "name": "Li Shanshan (李珊珊)",
-    "sortKey": "li shanshan",
+    "id": "profile-19",
+    "name": "Anonymous Profile 19",
+    "sortKey": "anonymous profile 19",
     "role": "Professor of Chemistry at Shenyang Institute of Engineering",
     "career": "Chemistry Education",
     "field": "Chemistry",
@@ -862,7 +862,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Li Shanshan is a professor of chemistry at Shenyang Institute of Engineering."
+        "text": "This respondent is a professor of chemistry at Shenyang Institute of Engineering."
       },
       {
         "label": "What sparked their interest",
@@ -907,9 +907,9 @@ const profiles = [
     ]
   },
   {
-    "id": "li-yuxi",
-    "name": "Li Yuxi (李予熙)",
-    "sortKey": "li yuxi",
+    "id": "profile-20",
+    "name": "Anonymous Profile 20",
+    "sortKey": "anonymous profile 20",
     "role": "Accounting Undergraduate and M&A Intern",
     "career": "Accounting and Finance",
     "field": "Accounting and Data Analysis",
@@ -923,7 +923,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Li Yuxi is a third-year Bachelor of Science in Accounting student at the University of Macau and an intern in financing and mergers and acquisitions at an accounting firm."
+        "text": "This respondent is a third-year Bachelor of Science in Accounting student at the University of Macau and an intern in financing and mergers and acquisitions at an accounting firm."
       },
       {
         "label": "What sparked their interest",
@@ -960,10 +960,10 @@ const profiles = [
     ]
   },
   {
-    "id": "li-ziyue",
-    "name": "Li Ziyue (李子悦)",
-    "sortKey": "li ziyue",
-    "role": "STEM Undergraduate Student",
+    "id": "profile-21",
+    "name": "Anonymous Profile 21",
+    "sortKey": "anonymous profile 21",
+    "role": "STEM Undergraduate This respondent",
     "career": "Physics Education",
     "field": "STEM",
     "summary": "An undergraduate student who reflects on gender bias, trust among women, and the importance of expression skills.",
@@ -976,7 +976,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Li Ziyue is an undergraduate STEM student."
+        "text": "This respondent is an undergraduate STEM student."
       },
       {
         "label": "What sparked their interest",
@@ -1017,10 +1017,10 @@ const profiles = [
     ]
   },
   {
-    "id": "ling-leyun",
-    "name": "Ling Leyun (凌乐芸)",
-    "sortKey": "ling leyun",
-    "role": "Second-Year Physics Education Student",
+    "id": "profile-22",
+    "name": "Anonymous Profile 22",
+    "sortKey": "anonymous profile 22",
+    "role": "Second-Year Physics Education This respondent",
     "career": "Physics Education",
     "field": "Physics and Teaching",
     "summary": "A second-year physics education student who became more confident through teaching and learning to recover from setbacks.",
@@ -1033,7 +1033,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Ling Leyun is a second-year student in physics education at Yangzhou University."
+        "text": "This respondent is a second-year student in physics education at Yangzhou University."
       },
       {
         "label": "What sparked their interest",
@@ -1074,8 +1074,8 @@ const profiles = [
     ]
   },
   {
-    "id": "lisa",
-    "name": "Lisa",
+    "id": "profile-23",
+    "name": "Anonymous Profile 23",
     "role": "Chemistry Lab Technician",
     "career": "Lab Science",
     "field": "Chemistry",
@@ -1089,7 +1089,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Lisa works as a chemistry lab technician. Her work connects experimental design, careful lab practice, and precision, especially in technical environments where accuracy matters."
+        "text": "This respondent works as a chemistry lab technician. Her work connects experimental design, careful lab practice, and precision, especially in technical environments where accuracy matters."
       },
       {
         "label": "What sparked their interest",
@@ -1112,13 +1112,13 @@ const profiles = [
         "text": "Focus on long-term goals instead of immediate academic perfection. Do not let one difficult course make you give up on an entire field. Pay attention to the subjects whose logic clicks for you."
       }
     ],
-    "sortKey": "lisa"
+    "sortKey": "anonymous profile 23"
   },
   {
-    "id": "mathematics-teacher-cn",
-    "name": "Mathematics Teacher",
-    "sortKey": "mathematics teacher",
-    "role": "Mathematics Teacher",
+    "id": "profile-24",
+    "name": "Anonymous Profile 24",
+    "sortKey": "anonymous profile 24",
+    "role": "This respondent",
     "career": "STEM Education",
     "field": "Mathematics",
     "summary": "A mathematics teacher who emphasizes problem decomposition, logical reasoning, practice, and reflection.",
@@ -1172,9 +1172,9 @@ const profiles = [
     ]
   },
   {
-    "id": "niu-wei",
-    "name": "Niu Wei (牛微)",
-    "sortKey": "niu wei",
+    "id": "profile-25",
+    "name": "Anonymous Profile 25",
+    "sortKey": "anonymous profile 25",
     "role": "Associate Professor of Applied Chemistry",
     "career": "Chemistry Education",
     "field": "Applied Chemistry",
@@ -1188,7 +1188,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Niu Wei is an associate professor in applied chemistry."
+        "text": "This respondent is an associate professor in applied chemistry."
       },
       {
         "label": "What sparked their interest",
@@ -1225,9 +1225,9 @@ const profiles = [
     ]
   },
   {
-    "id": "pan-yufei",
-    "name": "Pan Yufei (潘雨霏)",
-    "sortKey": "pan yufei",
+    "id": "profile-26",
+    "name": "Anonymous Profile 26",
+    "sortKey": "anonymous profile 26",
     "role": "Physics Education Undergraduate",
     "career": "Physics Education",
     "field": "Physics",
@@ -1241,7 +1241,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Pan Yufei is a 2024 undergraduate in physics education at the School of Physical Science and Technology / Integrated Circuit College of Yangzhou University. She focuses on physics coursework and participates in physics education projects and competition preparation."
+        "text": "This respondent is a 2024 undergraduate in physics education at the School of Physical Science and Technology / Integrated Circuit College of Yangzhou University. She focuses on physics coursework and participates in physics education projects and competition preparation."
       },
       {
         "label": "What sparked their interest",
@@ -1282,8 +1282,8 @@ const profiles = [
     ]
   },
   {
-    "id": "stephanie",
-    "name": "Stephanie Paul",
+    "id": "profile-27",
+    "name": "Anonymous Profile 27",
     "role": "STEM leadership and communication coach",
     "career": "Leadership Coaching",
     "field": "Stem Leadership",
@@ -1297,7 +1297,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Stephanie Paul works with scientists, engineers, and technical leaders who are moving from expert contributor roles into leadership and communication-heavy roles."
+        "text": "This respondent works with scientists, engineers, and technical leaders who are moving from expert contributor roles into leadership and communication-heavy roles."
       },
       {
         "label": "What sparked their interest",
@@ -1320,11 +1320,11 @@ const profiles = [
         "text": "Support yourself with community, mentors, coaches, and strong networks. STEM is creative, and students should invest in their own growth and development."
       }
     ],
-    "sortKey": "paul stephanie"
+    "sortKey": "anonymous profile 27"
   },
   {
-    "id": "michelle",
-    "name": "Michelle Pinheiro",
+    "id": "profile-28",
+    "name": "Anonymous Profile 28",
     "role": "Physician and Coroner",
     "career": "Medicine And Public Health",
     "field": "Medicine And Women’S Health",
@@ -1338,7 +1338,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Michelle Pinheiro is a physician and coroner. Her STEM path combines biology, chemistry, technology, diagnosis, treatment, and compassion."
+        "text": "This respondent is a physician and coroner. Her STEM path combines biology, chemistry, technology, diagnosis, treatment, and compassion."
       },
       {
         "label": "What sparked their interest",
@@ -1361,13 +1361,13 @@ const profiles = [
         "text": "Remember that you are constantly learning. Setbacks are part of the experience, so keep moving forward."
       }
     ],
-    "sortKey": "pinheiro michelle"
+    "sortKey": "anonymous profile 28"
   },
   {
-    "id": "professional-course-teacher",
-    "name": "Professional Course Teacher",
-    "sortKey": "professional course teacher",
-    "role": "Professional Course Teacher",
+    "id": "profile-29",
+    "name": "Anonymous Profile 29",
+    "sortKey": "anonymous profile 29",
+    "role": "This respondent",
     "career": "Environmental Education",
     "field": "Environmental Protection",
     "summary": "A professional course teacher whose work is connected to environmental protection and applied STEM learning.",
@@ -1425,8 +1425,8 @@ const profiles = [
     ]
   },
   {
-    "id": "nina",
-    "name": "Nina Padme Eufracio Rojas",
+    "id": "profile-30",
+    "name": "Anonymous Profile 30",
     "role": "Scientist in training and STEM outreach founder",
     "career": "Research And Stem Outreach",
     "field": "Molecular Biology, Ai, And Space Science",
@@ -1440,7 +1440,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Nina Padme Eufracio Rojas is a scientist in training and founder of ALEBRIJES International STEM. Her work connects frontier science with science education, outreach, olympiads, and access for young people in Mexico and Latin America."
+        "text": "This respondent is a scientist in training and founder of ALEBRIJES International STEM. Her work connects frontier science with science education, outreach, olympiads, and access for young people in Mexico and Latin America."
       },
       {
         "label": "What sparked their interest",
@@ -1463,11 +1463,11 @@ const profiles = [
         "text": "Do not wait for a great university or perfect lab to begin. Start with a question, read, look for programs, contact researchers, do small projects, document ideas, and do not be ashamed to learn from the basics."
       }
     ],
-    "sortKey": "rojas nina padme eufracio"
+    "sortKey": "anonymous profile 30"
   },
   {
-    "id": "sagaidak",
-    "name": "Dr. Sagaidak",
+    "id": "profile-31",
+    "name": "Anonymous Profile 31",
     "role": "Family Doctor",
     "career": "Medicine",
     "field": "Family Medicine",
@@ -1481,7 +1481,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Dr. Sagaidak is a family doctor who works primarily in Edmonton, Alberta and sometimes in the Northwest Territories."
+        "text": "This respondent is a family doctor who works primarily in Edmonton, Alberta and sometimes in the Northwest Territories."
       },
       {
         "label": "What sparked their interest",
@@ -1504,13 +1504,13 @@ const profiles = [
         "text": "Believe in yourself and do not compare yourself to others. If you truly enjoy the field, do not let people discourage you by saying it is too hard."
       }
     ],
-    "sortKey": "sagaidak"
+    "sortKey": "anonymous profile 31"
   },
   {
-    "id": "science-teacher-cn",
-    "name": "Science Teacher",
-    "sortKey": "science teacher cn",
-    "role": "Science Teacher",
+    "id": "profile-32",
+    "name": "Anonymous Profile 32",
+    "sortKey": "anonymous profile 32",
+    "role": "This respondent",
     "career": "STEM Education",
     "field": "Science Education and Biology",
     "summary": "A science teacher who moved from laboratory work into education and values real-world investigation.",
@@ -1560,10 +1560,10 @@ const profiles = [
     ]
   },
   {
-    "id": "second-year-physics-student-a",
-    "name": "Second-Year Physics Student",
-    "sortKey": "second year physics student a",
-    "role": "Second-Year Student",
+    "id": "profile-33",
+    "name": "Anonymous Profile 33",
+    "sortKey": "anonymous profile 33",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A second-year student who connects physics learning with teaching practice and first-principles calculation.",
@@ -1613,10 +1613,10 @@ const profiles = [
     ]
   },
   {
-    "id": "second-year-student-b",
-    "name": "Second-Year Student",
-    "sortKey": "second year student b",
-    "role": "Second-Year Student",
+    "id": "profile-34",
+    "name": "Anonymous Profile 34",
+    "sortKey": "anonymous profile 34",
+    "role": "This respondent",
     "career": "STEM Education",
     "field": "Physics Education",
     "summary": "A second-year student who values clear answers, logical thinking, and guidance from teachers.",
@@ -1666,8 +1666,8 @@ const profiles = [
     ]
   },
   {
-    "id": "mitali",
-    "name": "Mitali Sharma",
+    "id": "profile-35",
+    "name": "Anonymous Profile 35",
     "role": "Kinesiology graduate",
     "career": "Kinesiology And Health Science",
     "field": "Kinesiology",
@@ -1681,7 +1681,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Mitali Sharma is a recent University of Waterloo graduate with an Honours Bachelor of Science in Kinesiology."
+        "text": "This respondent is a recent University of Waterloo graduate with an Honours Bachelor of Science in Kinesiology."
       },
       {
         "label": "What sparked their interest",
@@ -1704,12 +1704,12 @@ const profiles = [
         "text": "Network more, get involved, and do not be afraid to try new things. There is something to learn from every opportunity if you are willing to try."
       }
     ],
-    "sortKey": "sharma mitali"
+    "sortKey": "anonymous profile 35"
   },
   {
-    "id": "song-wenwei",
-    "name": "Song Wenwei (宋文伟)",
-    "sortKey": "song wenwei",
+    "id": "profile-36",
+    "name": "Anonymous Profile 36",
+    "sortKey": "anonymous profile 36",
     "role": "University Teacher",
     "career": "Higher Education",
     "field": "Research and Teaching",
@@ -1723,7 +1723,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Song Wenwei is a university teacher."
+        "text": "This respondent is a university teacher."
       },
       {
         "label": "What sparked their interest",
@@ -1760,10 +1760,10 @@ const profiles = [
     ]
   },
   {
-    "id": "student-physics-cn",
-    "name": "Student",
-    "sortKey": "student physics cn",
-    "role": "Student",
+    "id": "profile-37",
+    "name": "Anonymous Profile 37",
+    "sortKey": "anonymous profile 37",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A student who connects STEM interest to teacher guidance and persistence.",
@@ -1805,10 +1805,10 @@ const profiles = [
     ]
   },
   {
-    "id": "tang-beibei",
-    "name": "Tang Beibei (汤贝贝)",
-    "sortKey": "tang beibei",
-    "role": "Physics Education Student",
+    "id": "profile-38",
+    "name": "Anonymous Profile 38",
+    "sortKey": "anonymous profile 38",
+    "role": "Physics Education This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A Yangzhou University physics education student who values truth-seeking, effort, and self-directed planning.",
@@ -1821,7 +1821,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Tang Beibei is a physics education student at Yangzhou University."
+        "text": "This respondent is a physics education student at Yangzhou University."
       },
       {
         "label": "What sparked their interest",
@@ -1862,9 +1862,9 @@ const profiles = [
     ]
   },
   {
-    "id": "tang-meiling",
-    "name": "Tang Meiling (唐美玲)",
-    "sortKey": "tang meiling",
+    "id": "profile-39",
+    "name": "Anonymous Profile 39",
+    "sortKey": "anonymous profile 39",
     "role": "Associate Professor",
     "career": "Engineering Education",
     "field": "Engineering and Power Generation",
@@ -1878,7 +1878,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Tang Meiling is an associate professor."
+        "text": "This respondent is an associate professor."
       },
       {
         "label": "What sparked their interest",
@@ -1911,10 +1911,10 @@ const profiles = [
     ]
   },
   {
-    "id": "teacher-training-student",
-    "name": "Teacher Training Student",
-    "sortKey": "teacher training student",
-    "role": "Student",
+    "id": "profile-40",
+    "name": "Anonymous Profile 40",
+    "sortKey": "anonymous profile 40",
+    "role": "This respondent",
     "career": "STEM Education",
     "field": "Teacher Education",
     "summary": "A teacher-training student who emphasizes thinking ability, steady attitude, and learning from project rejection.",
@@ -1956,8 +1956,8 @@ const profiles = [
     ]
   },
   {
-    "id": "mady",
-    "name": "Mady Thompson",
+    "id": "profile-41",
+    "name": "Anonymous Profile 41",
     "role": "PhD researcher in Biomedical Engineering",
     "career": "Biomedical Engineering",
     "field": "Biomedical Engineering",
@@ -1971,7 +1971,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Mady Thompson is defending her PhD in Biomedical Engineering and works part time at 3DBioFibR. Her research uses tissue engineering to create 3D cell culture models of peripheral nerve injuries."
+        "text": "This respondent is defending her PhD in Biomedical Engineering and works part time at 3DBioFibR. Her research uses tissue engineering to create 3D cell culture models of peripheral nerve injuries."
       },
       {
         "label": "What sparked their interest",
@@ -1994,13 +1994,13 @@ const profiles = [
         "text": "Do not panic about choosing one perfect path. STEM fields are increasingly interdisciplinary, and many roads can lead to meaningful work. Ask professors or professionals questions because most people are happy to share their experiences."
       }
     ],
-    "sortKey": "thompson mady"
+    "sortKey": "anonymous profile 41"
   },
   {
-    "id": "wang-caomu",
-    "name": "Wang Caomu (王草木)",
-    "sortKey": "wang caomu",
-    "role": "Student",
+    "id": "profile-42",
+    "name": "Anonymous Profile 42",
+    "sortKey": "anonymous profile 42",
+    "role": "This respondent",
     "career": "Physics and Mathematics",
     "field": "STEM",
     "summary": "A student who emphasizes love of science, concentration, and protecting curiosity from harmful stereotypes.",
@@ -2013,7 +2013,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wang Caomu is a student."
+        "text": "This respondent is a student."
       },
       {
         "label": "What sparked their interest",
@@ -2050,9 +2050,9 @@ const profiles = [
     ]
   },
   {
-    "id": "wang-dan",
-    "name": "Wang Dan (王丹)",
-    "sortKey": "wang dan",
+    "id": "profile-43",
+    "name": "Anonymous Profile 43",
+    "sortKey": "anonymous profile 43",
     "role": "Audit Manager",
     "career": "Accounting and Finance",
     "field": "Auditing",
@@ -2066,7 +2066,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wang Dan is an audit manager."
+        "text": "This respondent is an audit manager."
       },
       {
         "label": "What sparked their interest",
@@ -2103,10 +2103,10 @@ const profiles = [
     ]
   },
   {
-    "id": "wang-shiyu",
-    "name": "Wang Shiyu (王诗宇)",
-    "sortKey": "wang shiyu",
-    "role": "Physics Education Student",
+    "id": "profile-44",
+    "name": "Anonymous Profile 44",
+    "sortKey": "anonymous profile 44",
+    "role": "Physics Education This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A physics education student influenced by curiosity, experiments, and her mother’s work as a teacher.",
@@ -2119,7 +2119,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wang Shiyu studies physics education and is not currently holding a formal STEM role."
+        "text": "This respondent studies physics education and is not currently holding a formal STEM role."
       },
       {
         "label": "What sparked their interest",
@@ -2160,10 +2160,10 @@ const profiles = [
     ]
   },
   {
-    "id": "wang-yilu",
-    "name": "Wang Yilu (王仡陆)",
-    "sortKey": "wang yilu",
-    "role": "Physics Education Student and Teaching Department Deputy Minister",
+    "id": "profile-45",
+    "name": "Anonymous Profile 45",
+    "sortKey": "anonymous profile 45",
+    "role": "Physics Education This respondent and Teaching Department Deputy Minister",
     "career": "Physics Education",
     "field": "Physics and Science Outreach",
     "summary": "A physics education student who designs outreach lessons, teaching aids, and accessible science content for children.",
@@ -2176,7 +2176,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wang Yilu is a second-year physics education student at Yangzhou University. She serves as deputy minister of the teaching department in the Qisi Yixiang club, where she helps deliver physics outreach lessons, design teaching aids, and create science course materials for elementary students."
+        "text": "This respondent is a second-year physics education student at Yangzhou University. She serves as deputy minister of the teaching department in the Qisi Yixiang club, where she helps deliver physics outreach lessons, design teaching aids, and create science course materials for elementary students."
       },
       {
         "label": "What sparked their interest",
@@ -2217,10 +2217,10 @@ const profiles = [
     ]
   },
   {
-    "id": "wang-yiyi",
-    "name": "Wang Yiyi (王一一)",
-    "sortKey": "wang yiyi",
-    "role": "Physics Education Student",
+    "id": "profile-46",
+    "name": "Anonymous Profile 46",
+    "sortKey": "anonymous profile 46",
+    "role": "Physics Education This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A physics education student who learned to rebuild from weak foundations and plan for a future career direction.",
@@ -2233,7 +2233,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wang Yiyi is a student in physics education."
+        "text": "This respondent is a student in physics education."
       },
       {
         "label": "What sparked their interest",
@@ -2270,10 +2270,10 @@ const profiles = [
     ]
   },
   {
-    "id": "wang-yun",
-    "name": "Wang Yun (王芸)",
-    "sortKey": "wang yun",
-    "role": "Student",
+    "id": "profile-47",
+    "name": "Anonymous Profile 47",
+    "sortKey": "anonymous profile 47",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A student who connects STEM interest to curiosity, exams, and steady review.",
@@ -2286,7 +2286,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wang Yun is a student."
+        "text": "This respondent is a student."
       },
       {
         "label": "What sparked their interest",
@@ -2323,10 +2323,10 @@ const profiles = [
     ]
   },
   {
-    "id": "wu-yuqi",
-    "name": "Wu Yuqi (吴煜琦)",
-    "sortKey": "wu yuqi",
-    "role": "Undergraduate Student",
+    "id": "profile-48",
+    "name": "Anonymous Profile 48",
+    "sortKey": "anonymous profile 48",
+    "role": "Undergraduate This respondent",
     "career": "Physics",
     "field": "Physics and Computational Thinking",
     "summary": "An undergraduate driven by curiosity about nature, mathematical language, and the beauty of understanding the world.",
@@ -2339,7 +2339,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Wu Yuqi is currently an undergraduate student."
+        "text": "This respondent is currently an undergraduate student."
       },
       {
         "label": "What sparked their interest",
@@ -2380,9 +2380,9 @@ const profiles = [
     ]
   },
   {
-    "id": "xu-lin",
-    "name": "Xu Lin (许琳)",
-    "sortKey": "xu lin",
+    "id": "profile-49",
+    "name": "Anonymous Profile 49",
+    "sortKey": "anonymous profile 49",
     "role": "Youth Editorial Board Member",
     "career": "Materials and Metallurgy",
     "field": "Materials Science and Metallurgy",
@@ -2396,7 +2396,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Xu Lin serves as a youth editorial board member for a materials and metallurgy journal."
+        "text": "This respondent serves as a youth editorial board member for a materials and metallurgy journal."
       },
       {
         "label": "What sparked their interest",
@@ -2437,10 +2437,10 @@ const profiles = [
     ]
   },
   {
-    "id": "xu-ruijie",
-    "name": "Xu Ruijie (徐睿婕)",
-    "sortKey": "xu ruijie",
-    "role": "Student",
+    "id": "profile-50",
+    "name": "Anonymous Profile 50",
+    "sortKey": "anonymous profile 50",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A student whose interest in physics grew from high school physics classes and who responds to stereotypes through quiet effort.",
@@ -2453,7 +2453,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Xu Ruijie is currently a student."
+        "text": "This respondent is currently a student."
       },
       {
         "label": "What sparked their interest",
@@ -2490,9 +2490,9 @@ const profiles = [
     ]
   },
   {
-    "id": "yangzhou-physics-undergraduate",
-    "name": "Yangzhou University Physics Education Undergraduate",
-    "sortKey": "yangzhou university physics education undergraduate",
+    "id": "profile-51",
+    "name": "Anonymous Profile 51",
+    "sortKey": "anonymous profile 51",
     "role": "Physics Education Undergraduate",
     "career": "Physics Education",
     "field": "Physics",
@@ -2547,10 +2547,10 @@ const profiles = [
     ]
   },
   {
-    "id": "ye-ruiya",
-    "name": "Ye Ruiya (叶瑞雅)",
-    "sortKey": "ye ruiya",
-    "role": "University Student",
+    "id": "profile-52",
+    "name": "Anonymous Profile 52",
+    "sortKey": "anonymous profile 52",
+    "role": "University This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A university student who connects physics learning with persistence, planning, and growth.",
@@ -2563,7 +2563,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Ye Ruiya is a university student."
+        "text": "This respondent is a university student."
       },
       {
         "label": "What sparked their interest",
@@ -2604,9 +2604,9 @@ const profiles = [
     ]
   },
   {
-    "id": "yuan-momo",
-    "name": "Yuan Momo (袁茉茉)",
-    "sortKey": "yuan momo",
+    "id": "profile-53",
+    "name": "Anonymous Profile 53",
+    "sortKey": "anonymous profile 53",
     "role": "Family Officer",
     "career": "Finance and Planning",
     "field": "Wealth Planning and STEM Logic",
@@ -2620,7 +2620,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Yuan Momo works as a family officer."
+        "text": "This respondent works as a family officer."
       },
       {
         "label": "What sparked their interest",
@@ -2661,10 +2661,10 @@ const profiles = [
     ]
   },
   {
-    "id": "zhang-miao",
-    "name": "Zhang Miao (张淼)",
-    "sortKey": "zhang miao",
-    "role": "Computer Science Teacher",
+    "id": "profile-54",
+    "name": "Anonymous Profile 54",
+    "sortKey": "anonymous profile 54",
+    "role": "Computer This respondent",
     "career": "STEM Education",
     "field": "Computer Science and Mathematics",
     "summary": "A computer science teacher who connects STEM interest to math foundations, problem-solving, and classroom learning.",
@@ -2677,7 +2677,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Zhang Miao is a computer science teacher."
+        "text": "This respondent is a computer science teacher."
       },
       {
         "label": "What sparked their interest",
@@ -2714,10 +2714,10 @@ const profiles = [
     ]
   },
   {
-    "id": "zhou-yingying",
-    "name": "Zhou Yingying (周滢滢)",
-    "sortKey": "zhou yingying",
-    "role": "Student",
+    "id": "profile-55",
+    "name": "Anonymous Profile 55",
+    "sortKey": "anonymous profile 55",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics and Education",
     "summary": "A student interested in physics and education who emphasizes self-directed learning and early opportunities.",
@@ -2730,7 +2730,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Zhou Yingying is a student."
+        "text": "This respondent is a student."
       },
       {
         "label": "What sparked their interest",
@@ -2767,10 +2767,10 @@ const profiles = [
     ]
   },
   {
-    "id": "zhu-zhiyao",
-    "name": "Zhu Zhiyao (朱旨瑶)",
-    "sortKey": "zhu zhiyao",
-    "role": "Student",
+    "id": "profile-56",
+    "name": "Anonymous Profile 56",
+    "sortKey": "anonymous profile 56",
+    "role": "This respondent",
     "career": "Physics Education",
     "field": "Physics",
     "summary": "A student whose interest was shaped by teacher guidance and who emphasizes persistence.",
@@ -2783,7 +2783,7 @@ const profiles = [
     "sections": [
       {
         "label": "About",
-        "text": "Zhu Zhiyao is a student."
+        "text": "This respondent is a student."
       },
       {
         "label": "What sparked their interest",
