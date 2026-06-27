@@ -50,8 +50,6 @@ function escapeHTML(value) {
   return String(value || '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[char]));
 }
 function initials(name) {
-  const match = String(name || '').match(/Anonymous Profile\s+(\d+)/i);
-  if (match) return match[1];
   const clean = String(name || '').replace(/\([^)]*\)/g, '').replace(/^(Dr\.?|Professor|Prof\.?|Ms\.?|Mrs\.?|Mr\.?)\s+/i, '').trim();
   const parts = clean.split(/\s+/).filter(Boolean);
   return (parts.map(w => w[0]).join('').slice(0,2) || '?').toUpperCase();
